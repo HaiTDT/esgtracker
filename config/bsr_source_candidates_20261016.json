@@ -1,0 +1,11 @@
+{
+  "status": "historical_candidates_followed_by_windows_https_hash_verification",
+  "checked_date": "2026-10-16",
+  "limitations": "Initial web/Python clients failed. Windows HTTPS with certificate validation subsequently succeeded; see source_provenance.json and validation/report.json. Candidate flags below describe discovery, not the later verification. The 2025 official bytes differ from the earlier local signed variant and were re-extracted as a new source.",
+  "official_indexes": ["https://bsr.com.vn/bao-cao", "https://bsr.com.vn/bao-cao-tai-chinh"],
+  "candidates": [
+    {"report_year": 2023, "report_type": "ESG", "url": "https://bsr.com.vn/c/document_library/get_file?groupId=37629&uuid=5f5c7959-bb00-781c-47e0-91cb020991be", "pdf_sha256_verified": false},
+    {"report_year": 2024, "report_type": "ESG", "url": "https://bsr.com.vn/c/document_library/get_file?download=true&groupId=37629&uuid=0e86e22d-dd69-fd1a-4882-b11b66fc3991", "pdf_sha256_verified": false},
+    {"report_year": 2025, "report_type": "ESG", "url": "https://bsr.com.vn/c/document_library/get_file?groupId=37629&uuid=221394f9-0fdb-a121-b6e4-fe441344df5f", "pdf_sha256_verified": false}
+  ]
+}
