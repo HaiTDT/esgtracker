@@ -1,0 +1,279 @@
+schema_version: bsr-ai-transcription-seeds/1.0
+status: AI_reviewed_pending_human_review
+basis: Values transcribed after visual inspection of the 29 rendered PDF pages, not copied from predicted values.
+sources:
+  separate2023: {prefix: 6d4a175feb, year: 2023, scope: Separate, balance_page: 8, employees_page: 12, advances_page: 25}
+  separate2024: {prefix: 84a73087f5, year: 2024, scope: Separate, balance_page: 8, employees_page: 12, advances_page: 25}
+  separate2025: {prefix: db1029e26a, year: 2025, scope: Separate, balance_page: 10, employees_page: 14}
+  consolidated2023: {prefix: 9be894816b, year: 2023, scope: Consolidated, balance_page: 8, employees_page: 12, advances_page: 26}
+  consolidated2024: {prefix: f31fb2cb62, year: 2024, scope: Consolidated, balance_page: 8, employees_page: 12}
+  consolidated2025: {prefix: 8fc6fc3995, year: 2025, scope: Consolidated, balance_page: 10, employees_page: 14, advances_page: 27}
+  esg2023: {prefix: feff97d171, year: 2023}
+  esg2024: {prefix: 7bf9e29857, year: 2024}
+  esg2025: {prefix: 595d7503b8, year: 2025}
+financial:
+  separate2023:
+    employee_quote: 'Tổng số nhân viên của Công ty tại ngày 31 tháng 12 năm 2023 là 1.531 (tại ngày 31 tháng 12 năm 2022: 1.510).'
+    employee_values: ['1.531', '1.510']
+    employee_box: [0.20, 0.50, 0.94, 0.535]
+    payables: ['226.325.237.339', '220.236.336.172']
+    payables_box: [0.15, 0.323, 0.94, 0.34]
+    advances: ['3.058.840.906', '422.297.449']
+    advances_box: [0.20, 0.234, 0.94, 0.249]
+  separate2024:
+    employee_quote: 'Tổng số nhân viên của Công ty tại ngày 31 tháng 12 năm 2024 là 1.543 (tại ngày 31 tháng 12 năm 2023: 1.531).'
+    employee_values: ['1.543', '1.531']
+    employee_box: [0.20, 0.509, 0.94, 0.542]
+    payables: ['188.019.387.854', '226.325.237.339']
+    payables_box: [0.15, 0.303, 0.94, 0.319]
+    advances: ['745.450.105', '3.058.840.906']
+    advances_box: [0.20, 0.236, 0.94, 0.255]
+  separate2025:
+    employee_quote: 'Tổng số nhân viên của Công ty tại ngày 31 tháng 12 năm 2025 là 1.594 (tại ngày 31 tháng 12 năm 2024: 1.543).'
+    employee_values: ['1.594', '1.543']
+    employee_box: [0.20, 0.662, 0.94, 0.695]
+    payables: ['462.779.842.733', '188.019.387.854']
+    payables_box: [0.15, 0.323, 0.94, 0.342]
+  consolidated2023:
+    employee_quote: 'Tổng số nhân viên của Công ty và công ty con tại ngày 31 tháng 12 năm 2023 là 1.855 (tại ngày 31 tháng 12 năm 2022: là 1.836).'
+    employee_values: ['1.855', '1.836']
+    employee_box: [0.20, 0.499, 0.94, 0.534]
+    payables: ['231.737.932.390', '225.004.801.795']
+    payables_box: [0.15, 0.289, 0.94, 0.308]
+    advances: ['3.058.840.906', '422.297.449']
+    advances_box: [0.20, 0.221, 0.94, 0.239]
+  consolidated2024:
+    employee_quote: 'Tổng số nhân viên của Công ty và công ty con tại ngày 31 tháng 12 năm 2024 là 1.840 (tại ngày 31 tháng 12 năm 2023: là 1.855).'
+    employee_values: ['1.840', '1.855']
+    employee_box: [0.20, 0.531, 0.94, 0.568]
+    payables: ['193.259.628.424', '231.737.932.390']
+    payables_box: [0.15, 0.308, 0.94, 0.326]
+  consolidated2025:
+    employee_quote: 'Tổng số nhân viên của Công ty và công ty con tại ngày 31 tháng 12 năm 2025 là 1.946 (tại ngày 31 tháng 12 năm 2024: là 1.891).'
+    employee_values: ['1.946', '1.891']
+    employee_box: [0.20, 0.653, 0.94, 0.687]
+    payables: ['475.159.449.255', '193.259.628.424']
+    payables_box: [0.15, 0.299, 0.94, 0.320]
+    advances: ['545.840.600', '957.450.105']
+    advances_box: [0.20, 0.641, 0.94, 0.662]
+esg2025_workforce:
+  page: 39
+  header: ['CHỈ SỐ TRỌNG YẾU', 'ĐVT', '2023', '2024', '2025']
+  years: [2023, 2024, 2025]
+  rows:
+    - {label: Tổng số lao động, unit: Người, values: ['1.532', '1.544', '1.594'], concept: employee_count, y: [0.698, 0.725]}
+    - {label: Nam, unit: Người, values: ['1.315', '1.322', '1.353'], concept: employee_count, population: Nam, y: [0.725, 0.754]}
+    - {label: Nữ, unit: Người, values: ['217', '222', '214'], concept: employee_count, population: Nữ, y: [0.754, 0.783]}
+    - {label: Nhân viên tuyển mới, unit: Người, values: ['39', '23', '61'], concept: null, y: [0.783, 0.812]}
+    - {label: Nhân viên thôi việc, unit: Người, values: ['23', '11', '11'], concept: null, y: [0.812, 0.842]}
+    - {label: Số chương trình đào tạo, unit: Chương trình, values: ['141', '168', '160'], concept: null, y: [0.842, 0.871]}
+    - {label: Tổng chi phí đào tạo, unit: Tỷ đồng, values: ['8', '7,9', '13'], concept: null, y: [0.871, 0.901]}
+    - {label: Lao động nữ giữ vị trí quản lý, unit: Người, values: ['18', '19', '23'], concept: null, y: [0.901, 0.931]}
+esg2025_appendix:
+  page: 65
+  year: 2025
+  left_table_title: 'PHỤ LỤC 4: BẢNG CHỈ SỐ TRỌNG YẾU ESG'
+  right_table_title: 'PHỤ LỤC 5: BẢNG CHI TIẾT CÁC CHỈ SỐ BỀN VỮNG (E-S-G)'
+  left_rows:
+    - [Tổng năng lượng tiêu thụ, GJ, '26.335.558', energy_within]
+    - [Cường độ năng lượng, GJ/tấn SP, '3.319', energy_intensity, ambiguous_separator]
+    - [Energy Intensity Index (EII), '%', '101,5', null]
+    - [Hao hụt năng lượng, '%', '7,2', null]
+    - [Phát thải khí nhà kính Scope 1, tCO2e, '1.780.388', scope1_gross]
+    - [Phát thải khí nhà kính Scope 2, tCO2e, '2.210', null, scope2_basis_not_reported]
+    - [Cường độ phát thải KNK, tCO2e/tấn SP, '0,225', ghg_intensity]
+    - [Tổng lượng nước khai thác, m³, '323.844.900', water_withdrawal]
+    - [Tổng lượng nước xả thải, m³, '2.397.357', water_discharge]
+    - [Tổng chất thải phát sinh, tấn, '7.586,89', null]
+    - [Số giờ công an toàn, giờ, '54,3 triệu', null, cumulative_period_unknown]
+    - [Tai nạn lao động mất ngày công, vụ, '0', null, count_not_rate]
+    - [Giờ đào tạo HSE/người/năm, giờ, '23', training_average, hse_subset_not_all_training]
+    - [Lượt người tham gia đào tạo, người, '14.512', null, attendance_not_unique_people]
+    - [Tổng chi phí bảo hiểm NLĐ, tỷ đồng, '183,3', null]
+    - [Tổng giá trị hoạt động cộng đồng, tỷ đồng, '179, 5', null]
+    - [Xếp hạng tín nhiệm quốc tế, '-', 'BB+', null, categorical]
+    - [Giá trị thương hiệu, triệu USD, '201,7', null]
+    - [Vốn điều lệ, tỷ đồng, '50.072', null]
+  right_rows:
+    - [Tổng năng lượng tiêu thụ trong tổ chức, GJ, '26.335.558', energy_within, 0.267]
+    - [Tiêu thụ nhiên liệu trực tiếp, GJ, '3.334.992', null, 0.294]
+    - [Điện năng tiêu thụ, GJ, '1.466.378', null, 0.320]
+    - [Cường độ tiêu thụ năng lượng, GJ/tấn SP, '3.319', energy_intensity, 0.348, ambiguous_separator]
+    - [Energy Intensity Index (EII), '%', '101,5', null, 0.410]
+    - [Hao hụt năng lượng, '%', '7,2', null, 0.437]
+    - [Phát thải khí nhà kính Scope 1, tCO2e, '1.790.388', scope1_gross, 0.463]
+    - [Phát thải khí nhà kính Scope 2, tCO2e, '2.210', null, 0.489, scope2_basis_not_reported]
+    - [Cường độ phát thải khí nhà kính, tCO2e/tấn SP, '0,225', ghg_intensity, 0.518]
+    - [Lượng phát thải KNK, tCO2e, '1.792.598,00', null, 0.547, report_disclosure_label_not_confirmed]
+    - [Phát thải NOx, tấn, '2.139,20', null, 0.573]
+    - [Phát thải SOx, tấn, '3.957,30', null, 0.601]
+    - [Lượng khí flare phát sinh, tấn, '4.147,00', null, 0.627]
+    - [Tổng lượng nước khai thác (nước biển làm mát), m³, '323.844.900', water_withdrawal, 0.652, cooling_seawater_only]
+    - [Nguồn nước sử dụng (nước ngọt), m³, '3.196.774', null, 0.679, freshwater_use_not_proven_consumption]
+    - [Tổng lượng nước xả thải, m³, '2.397.357', water_discharge, 0.705]
+    - [Tỷ lệ nước thải đạt quy chuẩn, '%', '100% đạt QCVN', null, 0.733]
+    - [Lượng nước tái sử dụng, m³/ngày, '720', null, 0.763, reuse_not_water_consumption]
+    - [Tỷ lệ nước tái sử dụng, '%', '9,88', null, 0.792]
+    - [Tổng chất thải phát sinh, tấn, '7.586,89', null, 0.818]
+    - [Chất thải nguy hại, tấn, '3.666,43', waste_generated_hazardous, 0.844]
+    - [Chất thải không nguy hại, tấn, '2.310,46', waste_generated_nonhazardous, 0.872]
+    - [Chất thải được tái chế/thu hồi, tấn, '3.171,39', waste_diverted, 0.899]
+    - [Tỷ lệ tái chế chất thải, '%', '41,8%', null, 0.925]
+supplemental_measurements:
+  - {source: esg2023, page: 26, label: Tổng lượng nước biển sử dụng năm 2023, raw: '280.425.909', unit: m³, year: 2023, concept: water_withdrawal, box: [0.55, 0.12, 0.75, 0.205], note: Nước biển làm mát, không gộp thành tổng nước tiêu thụ.}
+  - {source: esg2023, page: 26, label: Tổng lượng nước ngọt sử dụng năm 2023, raw: '3.093.350', unit: m³, year: 2023, concept: null, box: [0.55, 0.237, 0.75, 0.316], note: Nguồn nước Vinaconex; chưa khẳng định là consumption theo chuẩn.}
+  - {source: esg2023, page: 26, label: Tổng lượng nước tái chế và tái sử dụng (nước ngưng), raw: '3.748.413', unit: m³, year: 2023, concept: null, box: [0.55, 0.48, 0.75, 0.519], note: Tái sử dụng nước ngưng, không phải lượng nước lấy vào hoặc tiêu thụ.}
+  - {source: esg2023, page: 26, label: Tỷ lệ nước tái chế và tái sử dụng (nước ngưng), raw: '72,8', unit: '%', year: 2023, concept: null, box: [0.55, 0.48, 0.75, 0.519], note: Mẫu số chưa được xác nhận.}
+  - {source: esg2023, page: 26, label: Lưu lượng nước thải trung bình năm 2023 khoảng, raw: '255', unit: m³/h, year: 2023, concept: null, box: [0.76, 0.156, 0.95, 0.22], note: Giá trị xấp xỉ theo giờ; không nhân 8760 để tạo tổng nước thải năm.}
+  - {source: esg2023, page: 26, label: Lượng khí thải nhà kính phát thải năm 2023 khoảng, raw: '1.685.611', unit: tCO2e, year: 2023, concept: null, box: [0.76, 0.224, 0.95, 0.303], note: Nguồn có từ khoảng; chưa nêu Scope 1/2/3 nên không tự gán Scope 1.}
+  - {source: esg2023, page: 26, label: Điện năng, raw: '34,4', unit: kwh, year: 2023, concept: null, box: [0.047, 0.545, 0.182, 0.594], note: PDF chỉ in kwh, không có triệu; giữ 34,4 kwh và cần kiểm tra scale, không tự nhân một triệu.}
+  - {source: esg2023, page: 26, label: Tổng nhiên liệu, raw: '566.588,249', unit: tấn, year: 2023, concept: null, box: [0.19, 0.545, 0.44, 0.594], note: Khối lượng nhiên liệu, không phải năng lượng GJ; thiếu nhiệt trị thì không đổi.}
+  - {source: esg2023, page: 32, label: Tổng số lao động, raw: '1.532', unit: Người, year: 2023, concept: employee_count, box: [0.556, 0.53, 0.656, 0.596], note: Không tự gán 31/12, headcount/FTE hoặc reporting entity từ BCTC.}
+  - {source: esg2023, page: 32, label: Số lao động nữ nắm vị trí quản lý, raw: '18', unit: Người, year: 2023, concept: null, box: [0.823, 0.53, 0.951, 0.628], note: Quản lý nói chung, không mặc định là nữ thành viên HĐQT.}
+  - {source: esg2023, page: 32, label: Số nhân viên thuê mới, raw: '39', unit: Người, year: 2023, concept: null, box: [0.639, 0.739, 0.731, 0.829], note: Số tuyển mới, không phải tổng nhân viên.}
+  - {source: esg2023, page: 32, label: Số nhân viên thôi việc, raw: '23', unit: Người, year: 2023, concept: null, box: [0.556, 0.739, 0.639, 0.829], note: Số thôi việc, không phải tỷ lệ turnover.}
+  - {source: esg2024, page: 26, label: Tổng lượng nước biển sử dụng năm 2024, raw: '277.257.914', unit: m³, year: 2024, concept: water_withdrawal, box: [0.047, 0.501, 0.44, 0.535], note: Nước biển làm mát; không đồng nhất với nước tiêu thụ.}
+  - {source: esg2024, page: 26, label: Tổng lượng nước tái chế và tái sử dụng (nước ngưng), raw: '3.503.200', unit: m³, year: 2024, concept: null, box: [0.047, 0.412, 0.44, 0.441], note: Nước ngưng tái sử dụng, không tự map 303-5 water consumption.}
+  - {source: esg2024, page: 26, label: Tỷ lệ nước tái chế và tái sử dụng (nước ngưng), raw: '72,6', unit: '%', year: 2024, concept: null, box: [0.047, 0.412, 0.44, 0.441], note: Mẫu số chưa được xác nhận.}
+  - {source: esg2024, page: 26, label: Lưu lượng nước thải trung bình năm 2024 khoảng, raw: '245,4', unit: m3/h, year: 2024, concept: null, box: [0.047, 0.559, 0.189, 0.769], note: Giá trị theo giờ; không tự suy tổng thể tích năm từ thời gian vận hành giả định.}
+  - {source: esg2024, page: 33, label: Tổng số lao động, raw: '1.532', unit: Người, year: 2023, concept: employee_count, box: [0.556, 0.466, 0.951, 0.496], note: Cột Năm 2023, không phải kết quả năm báo cáo 2024.}
+  - {source: esg2024, page: 33, label: Tổng số lao động, raw: '1.544', unit: Người, year: 2024, concept: employee_count, box: [0.556, 0.466, 0.951, 0.496], note: Cột Năm 2024; ngày đo và FTE/headcount chưa xác nhận.}
+  - {source: esg2024, page: 33, label: Số lao động nữ nắm vị trí quản lý, raw: '18', unit: Người, year: 2023, concept: null, box: [0.556, 0.575, 0.951, 0.606], note: Cột 2023; quản lý nói chung, không mặc định HĐQT.}
+  - {source: esg2024, page: 33, label: Số lao động nữ nắm vị trí quản lý, raw: '19', unit: Người, year: 2024, concept: null, box: [0.556, 0.575, 0.951, 0.606], note: Cột 2024; không mặc định HĐQT.}
+esg2024_chart:
+  page: 31
+  title: Số lượng nhân viên mới/ thôi việc qua các năm
+  years: [2022, 2023, 2024]
+  series:
+    - {label: Số nhân viên tuyển mới, values: ['10', '39', '23'], box: [0.047, 0.569, 0.25, 0.829]}
+    - {label: Số nhân viên thôi việc, values: ['15', '23', '11'], box: [0.26, 0.569, 0.44, 0.829]}
+narratives:
+  - source: esg2023
+    page: 15
+    start: 'Để kiểm soát có hệ thống và hiệu quả'
+    end: 'hiện hành.'
+    classification: reported_action_and_qualitative_claim
+    note: Giữ 42,2 triệu giờ như mốc an toàn; không tự coi là số giờ phát sinh riêng năm 2023 hoặc suy LTIFR.
+  - source: esg2023
+    page: 15
+    start: 'Xây dựng, phát triển Công ty'
+    end: 'đóng góp hiệu quả công tác an sinh xã hội.'
+    classification: strategic_aspiration_not_quantified_company_target
+    note: Tham gia mục tiêu phát thải ròng bằng 0 năm 2050; chưa đủ base year, scope, baseline để thành mục tiêu định lượng riêng BSR.
+  - source: esg2023
+    page: 19
+    start: 'Bao gồm các khu vực'
+    end: 'B S R …'
+    classification: material_topic_boundary_context_not_universal_kpi_boundary
+    note: Không áp mô tả nhà máy/văn phòng/thuê ngoài sang KPI HĐQT hoặc mọi chỉ tiêu khác.
+  - source: esg2024
+    page: 20
+    start: 'Các giao dịch giữa BSR và nhà thầu'
+    end: 'quy trình, quy định đã ban hành, đảm bảo minh bạch.'
+    classification: reported_process
+    concept: material_topic_policy_action
+    note: Tuyên bố về quy trình, không chứng minh số vụ tham nhũng bằng 0.
+  - source: esg2024
+    page: 20
+    start: 'BSR tuân thủ đầy đủ nghĩa vụ về thuế'
+    end: 'thông tin.'
+    classification: qualitative_compliance_claim
+    note: Không chuyển thành số thuế đã nộp hoặc kết luận tuân thủ đã được kiểm chứng.
+  - source: esg2024
+    page: 28
+    start: 'Total GHG emissions 1990 - 2023'
+    end: 'Total GHG emissions 1990 - 2023'
+    classification: external_global_context_not_bsr_metric
+    exact: 'Total GHG emissions 1990 - 2023 (GtCO2e/year)'
+    note: Biểu đồ tổng phát thải toàn cầu, nguồn Emissions Gap Report 2024; 57,1 GtCO2e không phải phát thải BSR.
+  - source: esg2024
+    page: 31
+    start: 'Nhà máy Lọc dầu Dung Quất là một'
+    end: 'làm trực tiếp cho 1.544 lao động.'
+    classification: workforce_narrative_not_explicit_year_end_headcount
+    note: Số lao động trực tiếp được nêu là 1.544; không tự gán ngày 31/12 hoặc headcount/FTE.
+  - source: esg2024
+    page: 31
+    start: 'Thực hiện tốt quy tắc ứng xử'
+    end: 'hành để nâng cao tính minh bạch và trách nhiệm giải trình.'
+    classification: governance_policy_implementation_claim
+    concept: material_topic_policy_action
+    note: Có nêu HĐQT phê duyệt; không phải số lượng hoặc tỷ lệ thành viên HĐQT độc lập.
+  - source: esg2025
+    page: 34
+    start: 'Trong nhiều năm qua, không có sự cố xảy ra'
+    end: 'sinh học trong khu vực.'
+    classification: qualitative_multiyear_claim_not_annual_spill_count
+    note: Không chuyển câu này thành số vụ tràn dầu năm 2025 bằng 0.
+  - source: esg2025
+    page: 34
+    start: 'Trong thời gian tới, BSR tiếp tục duy trì định hướng'
+    end: 'vào các mục tiêu trọng tâm:'
+    classification: strategic_direction
+    concept: material_topic_policy_action
+    note: Mục tiêu định hướng; không tự tạo target_value/base_year.
+  - source: esg2025
+    page: 34
+    start: 'Từng bước xây dựng lộ trình giảm phát thải'
+    end: 'năng lượng của ngành dầu khí và cam kết Net Zero của Việt Nam vào năm 2050.'
+    classification: national_goal_alignment_not_verified_company_net_zero_target
+    concept: climate_target
+    note: Cần rà thêm scope, baseline, phương pháp và mục tiêu riêng của doanh nghiệp; chưa gán năm 2050 thành deadline cam kết riêng BSR.
+issues:
+  - id: appendix_scope1_two_values
+    source: esg2025
+    pages: [65]
+    kind: internal_consistency_NeedsReview
+    note: Phụ lục 4 ghi Scope 1 là 1.780.388; Phụ lục 5 ghi 1.790.388 tCO2e. Giữ hai bản ghi riêng theo vị trí, không tự chọn giá trị đúng.
+  - id: workforce_2025_breakdown
+    source: esg2025
+    pages: [39]
+    kind: internal_consistency_NeedsReview
+    note: Hàng tổng 1.594; Nam 1.353 và Nữ 214 cộng thành 1.567, chênh 27. Cần xác nhận tính bao phủ các nhóm, không sửa tổng bằng phép cộng.
+  - id: consolidated_2024_comparative
+    source: consolidated2025
+    pages: [14]
+    other_source: consolidated2024
+    other_pages: [12]
+    kind: cross_report_comparative_NeedsReview
+    note: BCTC hợp nhất 2024 ghi 1.840 nhân viên tại 31/12/2024; số so sánh 2024 trong BCTC hợp nhất 2025 là 1.891. Chưa xác nhận lý do/restatement; không tự chuẩn hóa hai số.
+  - id: appendix_index_not_measurement
+    source: esg2025
+    pages: [64]
+    kind: extraction_classification_error_candidate
+    note: Bảng chỉ mục chứa mã GRI/SASB/SDG và số trang; không phải giá trị KPI. Cần tách declared_standard_reference khỏi measurement.
+  - id: esg2023_topic_index_not_measurement
+    source: esg2023
+    pages: [19]
+    kind: extraction_classification_error_candidate
+    note: Bảng chủ đề trọng yếu và mã disclosure không phải số phát thải, năng lượng hoặc tỷ lệ KPI.
+  - id: report_sasb_rt_ch_mapping
+    source: esg2025
+    pages: [64]
+    kind: standards_mapping_NeedsReview
+    note: Báo cáo tự ghi mã SASB RT-CH; lưu nguyên văn ở lớp declared reference. Không tự đổi thành EM-RM hoặc coi mapping tác giả báo cáo là mapping chuẩn đã xác minh.
+  - id: energy_intensity_separator
+    source: esg2025
+    pages: [65]
+    kind: numeric_notation_NeedsReview
+    note: Cường độ năng lượng in 3.319 GJ/tấn SP; chưa chốt dấu chấm là thập phân hay phân nhóm. Giữ raw, normalized_value=null đến khi xác nhận.
+  - id: hazardous_waste_sum
+    source: esg2025
+    pages: [65]
+    kind: internal_consistency_NeedsReview
+    note: Tổng chất thải ghi 7.586,89 tấn; nguy hại 3.666,43 và không nguy hại 2.310,46 cộng 5.976,89. Cần kiểm tra đủ nhóm/phạm vi; không tự sửa số hay kết luận sai phạm.
+  - id: global_ghg_chart_not_company
+    source: esg2024
+    pages: [28]
+    kind: reporting_entity_NeedsReview
+    note: Biểu đồ Total GHG emissions 1990-2023 là bối cảnh toàn cầu, không phải kết quả BSR. Các cột QCVN màu cam trong biểu đồ CO/H2S là giới hạn quy chuẩn, không phải giá trị đo.
+  - id: two_years_one_paragraph_locator
+    source: separate2024
+    pages: [12]
+    kind: benchmark_locator_NeedsReview
+    note: Một đoạn có cả số nhân viên năm nay và năm trước; hai record dùng chung JSON pointer đoạn không nhất thiết là trích xuất trùng. Cần span/cột/năm trong locator gold trước khi chấm; không bỏ record chỉ vì trùng pointer đoạn.
+  - id: esg2023_electricity_scale
+    source: esg2023
+    pages: [26]
+    kind: unit_scale_NeedsReview
+    note: Hộp Điện năng in 34,4 kwh; không có chữ triệu. Giữ đúng raw và cần kiểm tra nguồn bổ sung trước khi chuẩn hóa scale.

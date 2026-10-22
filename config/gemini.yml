@@ -1,0 +1,11 @@
+# No secret here. Key is read only from the server's GEMINI_API_KEY environment.
+model: gemini-3.8-flash
+pages_per_batch: 1
+context_pages: 1
+max_output_tokens: 16384
+timeout_seconds: 180
+retries: 0
+max_fragment_bytes: 8388608
+max_response_bytes: 33554432
+# Request cap includes failed calls/retries, across ALL files in one upload.
+default_max_requests: 10

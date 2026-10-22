@@ -198,6 +198,9 @@ def _period(record, headers, quote, uncertainties, column):
 
 def convert_document(document, source_info=None):
     """Return one strict handoff; unresolved document scope blocks Financial export."""
+    if document['output'].get('schema_version') == 'gemini-report-candidates/1.0':
+        from src.extraction.gemini_handoff import convert
+        return convert(document, source_info)
     info = source_info or {}
     output = document['output']
     report = output['reports'][0]

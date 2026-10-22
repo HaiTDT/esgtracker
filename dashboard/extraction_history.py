@@ -50,7 +50,7 @@ def load_saved_result(root, saved_id):
             return None
         documents.append({**doc, 'output': output})
     return {'status': 'completed', 'manifest': manifest, 'documents': documents,
-            'pipeline': manifest.get('pipeline'), 'run_directory': str(run),
+            'pipeline': manifest.get('pipeline'), 'engine': manifest.get('engine'), 'run_directory': str(run),
             'semantic_status': 'partial', 'graph_ready': False}
 
 

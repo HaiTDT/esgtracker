@@ -10,46 +10,15 @@ import re
 from src.extraction.financial_context_v2 import normalized
 from src.extraction.financial_v2 import parse_number
 from src.extraction.source_v2 import stable_id
+from src.quality.dictionary import load_dictionary, identify_metric
 
-VERSION = 'corporate-review/2.0'
-CATALOG = {
-    'net_sales_revenue': ('financial_performance', 'Doanh thu thuần bán hàng và cung cấp dịch vụ; không bao gồm doanh thu tài chính hoặc thu nhập khác.'),
-    'profit_after_tax': ('financial_performance', 'Lợi nhuận sau thuế thu nhập doanh nghiệp của kỳ; không phải lợi nhuận chưa phân phối hoặc riêng phần thuộc cổ đông công ty mẹ.'),
-    'profit_before_tax': ('financial_performance', 'Tổng lợi nhuận kế toán trước thuế thu nhập doanh nghiệp của kỳ.'),
-    'current_income_tax_expense': ('income_tax_expense', 'Chi phí thuế thu nhập doanh nghiệp hiện hành ghi nhận trong kỳ, không phải tiền thuế đã nộp.'),
-    'deferred_income_tax_expense': ('income_tax_expense', 'Chi phí thuế thu nhập doanh nghiệp hoãn lại trong kỳ.'),
-    'employee_payables': ('employee_payables_money', 'Số dư khoản phải trả người lao động tại ngày đo, bằng tiền; không phải số người hoặc chi phí lương cả năm.'),
-    'employee_advances': ('employee_advances_money', 'Số dư tạm ứng cho nhân viên tại ngày đo, bằng tiền; không phải số lượng nhân viên.'),
-    'sales_staff_expense': ('personnel_expense_money', 'Chi phí nhân viên bán hàng trong kỳ, bằng tiền; không phải số người.'),
-    'management_staff_expense': ('personnel_expense_money', 'Chi phí nhân viên quản lý trong kỳ, bằng tiền; không phải số người.'),
-    'employee_headcount_at_date': ('workforce_headcount', 'Tổng số nhân viên/người lao động tại ngày đo; phạm vi người được tính và cách đếm phải kiểm tra riêng.'),
-}
+VERSION = 'corporate-review/2.1'
+_DICTIONARY = load_dictionary()
+CATALOG = {key:(item['topic'],item['definition']) for key,item in _DICTIONARY['local_metrics'].items()}
 
 
 def identify(label):
-    t = normalized(label)
-    if 'phai tra nguoi lao dong' in t:
-        return 'employee_payables'
-    if 'tam ung cho nhan vien' in t:
-        return 'employee_advances'
-    if 'chi phi nhan vien ban hang' in t:
-        return 'sales_staff_expense'
-    if 'chi phi nhan vien quan ly' in t:
-        return 'management_staff_expense'
-    if 'doanh thu thuan ve ban hang' in t:
-        return 'net_sales_revenue'
-    if 'loi nhuan sau thue' in t and not any(s in t for s in ('chua phan phoi', 'co dong', 'trich', 'quy', 'dieu chinh')):
-        return 'profit_after_tax'
-    if 'tong loi nhuan ke toan truoc thue' in t:
-        return 'profit_before_tax'
-    if 'chi phi thue thu nhap doanh nghiep' in t and not any(s in t for s in ('dieu chinh', 'tinh tren', 'phat sinh', 'hoan nhap')):
-        if 'hien hanh' in t:
-            return 'current_income_tax_expense'
-        if 'hoan lai' in t:
-            return 'deferred_income_tax_expense'
-    if re.fullmatch(r'(tong so lao dong|tong so nhan vien)', t.strip()):
-        return 'employee_headcount_at_date'
-    return None
+    return identify_metric(label,_DICTIONARY)
 
 
 def review_topics(record):

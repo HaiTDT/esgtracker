@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["records", "page_reviews", "metadata", "warnings"],
+  "properties": {
+    "records": {"type": "array", "maxItems": 200, "items": {"$ref": "#/$defs/record"}},
+    "page_reviews": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["physical_page", "status", "note"],
+      "properties": {"physical_page": {"type": "integer"}, "status": {"enum": ["read", "unreadable", "no_relevant_data"]}, "note": {"type": "string"}}
+    }},
+    "metadata": {"type": "object", "additionalProperties": false, "required": ["company_name", "reporting_year", "statement_scope"],
+      "properties": {"company_name": {"$ref": "#/$defs/meta"}, "reporting_year": {"$ref": "#/$defs/meta"}, "statement_scope": {"$ref": "#/$defs/meta"}}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "meta": {"type": ["object", "null"], "additionalProperties": false, "required": ["value", "quote", "physical_page"],
+      "properties": {"value": {"type": "string"}, "quote": {"type": "string", "minLength": 1}, "physical_page": {"type": "integer"}}},
+    "record": {"type": "object", "additionalProperties": false,
+      "required": ["record_type", "domain", "pillar", "label_raw", "value_raw", "unit_raw", "year", "measurement_date", "period_start", "period_end", "reporting_entity", "consolidation_raw", "scope_raw", "interpretation_notes", "evidence"],
+      "properties": {
+        "record_type": {"enum": ["measurement", "claim", "policy", "action", "target", "governance", "financial_context"]},
+        "domain": {"enum": ["financial", "esg", "context"]}, "pillar": {"enum": ["E", "S", "G", "unknown"]},
+        "label_raw": {"type": "string", "minLength": 1, "maxLength": 2000},
+        "value_raw": {"type": ["string", "null"]}, "unit_raw": {"type": ["string", "null"]},
+        "year": {"type": ["integer", "null"]}, "measurement_date": {"type": ["string", "null"]},
+        "period_start": {"type": ["string", "null"]}, "period_end": {"type": ["string", "null"]},
+        "reporting_entity": {"type": ["string", "null"]}, "consolidation_raw": {"type": ["string", "null"]},
+        "scope_raw": {"type": ["string", "null"]},
+        "interpretation_notes": {"type": "array", "items": {"type": "string"}},
+        "evidence": {"type": "array", "minItems": 1, "maxItems": 30, "items": {
+          "type": "object", "additionalProperties": false, "required": ["physical_page", "role", "quote"],
+          "properties": {"physical_page": {"type": "integer"}, "role": {"enum": ["label", "value", "column_header", "unit", "narrative", "date", "boundary"]}, "quote": {"type": "string", "minLength": 1, "maxLength": 8000}}
+        }}
+      }
+    }
+  }
+}

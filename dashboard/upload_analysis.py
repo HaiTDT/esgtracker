@@ -13,6 +13,7 @@ from dashboard.extraction_history import history_options, load_saved_result
 from src.extraction.corporate_handoff import build_delivery, zip_delivery
 from dashboard.components.workspace import badge, icon, section_heading, stat_card, empty_state
 from dashboard.components.presentation import display_rows, session_summary, review_label, table_filter
+from dashboard.human_review import review_controls, register_review_callbacks, reviewed_result, review_export
 
 JOBS = {}
 LOCK = threading.Lock()
@@ -81,6 +82,19 @@ def upload_panel():
                                 {'label': 'Việt Nam: 1.594 = 1594; 1,5 = 1.5', 'value': 'vi'},
                                 {'label': 'English: 1,594 = 1594; 1.5 = 1.5', 'value': 'en'}], value='auto', clearable=False),
                               html.Small('Chỉ chọn sau khi kiểm tra định dạng trong báo cáo.')], className='extract-field'),
+                    html.Div([html.Label('Engine trích xuất', htmlFor='analysis-engine'),
+                              dcc.Dropdown(id='analysis-engine', clearable=False, value='docling', options=[
+                                  {'label': 'Docling + quy tắc — xử lý local', 'value': 'docling'},
+                                  {'label': 'Gemini API — đọc trực tiếp PDF trên Google', 'value': 'gemini'}])], className='extract-field'),
+                    html.Div([
+                        html.Div([html.Label('Gemini API model ID', htmlFor='analysis-gemini-model'),
+                                  dcc.Input(id='analysis-gemini-model', value='gemini-3.8-flash', type='text', maxLength=100)], className='extract-field'),
+                        html.Div([html.Label('Tối đa request cho toàn bộ lần tải', htmlFor='analysis-gemini-limit'),
+                                  dcc.Input(id='analysis-gemini-limit', value=10, type='number', min=1, max=1000, step=1)], className='extract-field'),
+                        html.Small('Request lỗi/retry cũng tính vào giới hạn. Đây không phải trần chi phí USD. Hết giới hạn: lưu partial, tải lại để tiếp tục.'),
+                        dcc.Checklist(id='analysis-gemini-consent', options=[{'label': 'Tôi đồng ý gửi các trang PDF lên Google và chấp nhận chi phí/quota Gemini API có thể phát sinh.', 'value': 'cloud'}], value=[]),
+                        html.Small('Key chỉ cấu hình bằng GEMINI_API_KEY trên máy chủ; không nhập key vào trình duyệt. Gói AI Studio Pro không thay thế cấu hình API.')
+                    ], id='analysis-gemini-settings', hidden=True, className='extract-field'),
                     html.Button('Trích xuất và phân tích →', id='analysis-start', n_clicks=0, className='extract-primary'),
                     html.Small('Xử lý toàn bộ trang · Thời gian phụ thuộc chất lượng PDF', className='extract-action-note'),
                 ], className='upload-settings'),
@@ -138,7 +152,7 @@ def upload_panel():
         ], id='claims', className='workspace-section'),
         html.Section([
             section_heading('03 / RÀ SOÁT BẰNG CHỨNG', 'Từ claim đến vị trí nguồn',
-                            'Xem nguyên văn, tài liệu, trang PDF và các trường chưa xác định. Chưa có thao tác duyệt hoặc xác minh tự động.'),
+                            'Xem nguyên văn, PDF và lưu bản rà soát theo từng field. Không tự xác minh hoặc kết luận tài chính.'),
             html.Div([
                 html.Div([html.H3('Đối chiếu với báo cáo tài chính'), badge('Chưa có kết quả đối chiếu tài chính'),
                           html.P('Trích xuất BCTC và liên kết ứng viên không được tính là claim đã đối chiếu tài chính.')], className='check-lane'),
@@ -153,6 +167,7 @@ def upload_panel():
                 html.Button('↓ Tải PDF gốc', id='analysis-source-download-button', n_clicks=0, className='extract-secondary', disabled=True),
                 dcc.Download(id='analysis-source-download'),
             ], className='source-actions workspace-card'),
+            review_controls(),
         ], id='evidence', className='workspace-section'),
         html.Section([
             section_heading('04 / KẾT QUẢ', 'Mang theo dữ liệu và bằng chứng',
@@ -212,7 +227,8 @@ def render_source(selection):
         locations.setdefault(key, source)
     visible_locations = list(locations.values())[:6]
     state, label = review_label(record)
-    return [html.Div([
+    model_origin = record.get('extraction_provenance', {}).get('provider') == 'gemini_api'
+    return [html.P('Nguồn Gemini: đây là nội dung mô hình đọc từ PDF, chưa được đối chiếu độc lập. JSON pointer dẫn đến quan sát của mô hình, không phải text OCR gốc. Hãy mở PDF để kiểm tra.', role='status', className='detail-note') if model_origin else None, html.Div([
         html.Div([html.Div([html.H3('Nội dung trích xuất'), badge(label, code=state)], className='evidence-card-head'),
                   html.Blockquote(record.get('original_text') or 'Không có nguyên văn trong record này.', className='claim-quote'),
                   html.Dl([html.Dt('Tài liệu'), html.Dd(selection['filename']),
@@ -269,10 +285,24 @@ def register_upload_callbacks(app, root):
     @app.callback(Output('analysis-job', 'data'), Input('analysis-start', 'n_clicks'),
                   State('analysis-upload', 'contents'), State('analysis-upload', 'filename'),
                   State('analysis-company', 'value'), State('analysis-year', 'value'), State('analysis-type', 'value'), State('analysis-number-format', 'value'),
+                  State('analysis-engine', 'value'), State('analysis-gemini-consent', 'value'),
+                  State('analysis-gemini-model', 'value'), State('analysis-gemini-limit', 'value'),
                   prevent_initial_call=True)
-    def start(clicks, contents, names, company, year, kind, number_format):
+    def start(clicks, contents, names, company, year, kind, number_format, engine='docling', consent=None, gemini_model=None, request_limit=10):
         if not contents:
             return {'error': 'Hãy chọn ít nhất một file PDF.'}
+        if engine not in ('docling', 'gemini'):
+            return {'error': 'Engine trích xuất không hợp lệ.'}
+        if engine == 'gemini':
+            try:
+                from src.extraction.gemini import settings, api_key, Budget
+                if 'cloud' not in (consent or []):
+                    raise ValueError('Cần xác nhận gửi PDF lên Google và chi phí API có thể phát sinh.')
+                settings(root, model=gemini_model)
+                Budget(request_limit)
+                api_key()  # Presence check only, never returned to browser/job JSON.
+            except ValueError as exc:
+                return {'error': str(exc)}
         job_id = uuid.uuid4().hex
         with LOCK:
             JOBS[job_id] = {'status': 'running'}
@@ -281,14 +311,19 @@ def register_upload_callbacks(app, root):
                 with LOCK:
                     JOBS[job_id]['progress'] = event
             try:
+                kwargs = {'engine': engine, 'cloud_consent': True, 'gemini_model': gemini_model, 'max_api_requests': request_limit} if engine == 'gemini' else {}
                 result = run_isolated_upload(root, job_id, contents, names, company, year,
-                    None if kind == 'auto' else kind, progress, number_format)
+                    None if kind == 'auto' else kind, progress, number_format, **kwargs)
             except Exception as exc:
                 result = {'status': 'failed', 'error': str(exc)}
             with LOCK:
                 JOBS[job_id] = result
         threading.Thread(target=work, daemon=True).start()
         return {'id': job_id, 'files': names}
+
+    @app.callback(Output('analysis-gemini-settings', 'hidden'), Output('analysis-gemini-consent', 'value'), Input('analysis-engine', 'value'))
+    def engine_settings(engine):
+        return engine != 'gemini', []
 
     @app.callback(Output('analysis-job', 'data', allow_duplicate=True),
                   Output('analysis-history-feedback', 'children'),
@@ -322,7 +357,7 @@ def register_upload_callbacks(app, root):
             labels = {'queued': 'Đang chờ worker trích xuất', 'preparing': 'Chuẩn bị tài liệu', 'document': 'Mở tài liệu', 'reading': 'Đọc trang PDF',
                       'ocr': 'Nhận dạng chữ OCR', 'docling': 'Docling: đọc bố cục, OCR và bảng',
                       'source_v2': 'Docling v2: đọc bố cục, OCR và bảng theo trang',
-                      'semantic_v2': 'Tạo records và liên kết ứng viên v2', 'claims': 'Tạo claim', 'export': 'Xuất kết quả'}
+                      'semantic_v2': 'Tạo records và liên kết ứng viên v2', 'gemini': 'Gemini API: đọc PDF và trích xuất ứng viên', 'claims': 'Tạo claim', 'export': 'Xuất kết quả'}
             total = event.get('page_total', 0)
             done = event.get('completed_pages', 0)
             detail = f"Trang {event.get('page', done)} / {total} · Đọc thành công {done} trang · Đã xử lý {event.get('finished_pages', done)} trang" if total else ''
@@ -330,6 +365,7 @@ def register_upload_callbacks(app, root):
                 html.Div(labels.get(stage, stage), className='extract-progress-title'),
                 html.Div(f"Tài liệu {event.get('document_index', 1)} / {event.get('document_total', len(job.get('files', [])) or 1)} · {event.get('filename', '')}"),
                 html.Div(detail),
+                html.Small(f"Gemini request: {event.get('api_requests_used', 0)}/{event.get('api_request_limit', '?')} — không phải số claim đã xác minh") if stage == 'gemini' else None,
                 html.Progress(value=done, max=total, className='extract-progress-bar') if total else html.Progress(className='extract-progress-bar'),
                 html.Small('Tiến độ biểu thị trang đọc thành công, không phải mức đầy đủ của dữ liệu. OCR có thể mất nhiều thời gian.'),
             ]), [], [], [], True, True, False, []
@@ -337,14 +373,15 @@ def register_upload_callbacks(app, root):
             return result['error'], [], [], [], True, False, True, []
         manifest = result['manifest']
         documents = result['documents']
-        rows = display_rows(result)
+        rows = display_rows(reviewed_result(result, root))
         issues = [(d, i) for d in documents for i in d['output']['issues']]
         failures = [html.Li(f"{f['filename']}: {f['error']}") for f in manifest['failures']]
         coverage = [html.Li(f"{d['filename']} — {d['output']['reports'][0]['company_id']} / {d['output']['reports'][0]['reporting_year']} / {d['output']['reports'][0]['report_type']} — {d['coverage']['counts'].get('processed', 0)}/{d['coverage']['total_pages']} trang thành công; capture: {d['capture_status']}; semantic: partial") for d in documents]
         incomplete = sum(d['capture_status'] != 'completed' for d in documents)
         options = [{'label': d['filename'], 'value': d['document_index']} for d in documents]
         return f"Đã kết thúc xử lý: {len(documents)}/{manifest['document_count']} tài liệu tạo kết quả, {len(rows)} records, {len(issues)} mục cần rà soát, {len(failures)} lỗi tài liệu, {incomplete} capture chưa đủ trang.", [
-            html.P('Pipeline v2 · dữ liệu ứng viên phân tích, không phải kiểm toán hoặc kết luận greenwashing. Chọn record trong bảng bên dưới để đối chiếu nguồn. Metadata nhận diện từ tên file cần được kiểm tra.'),
+            html.P(('Gemini PDF · ' if manifest.get('engine') == 'gemini' else 'Pipeline v2 · ') + 'dữ liệu ứng viên phân tích, không phải kiểm toán hoặc kết luận greenwashing. Chọn record để đối chiếu PDF; metadata đầu vào chưa được xác minh.'),
+            html.P(f"Request Gemini đã sử dụng: {manifest.get('api_requests_used', 0)}/{manifest.get('api_request_limit')}. Trang pending chưa được gửi; trang failed cần xử lý lại. Kết thúc phiên không có nghĩa đã đọc hết báo cáo hoặc xác minh các claim.") if manifest.get('engine') == 'gemini' else None,
             html.Ul(coverage), html.Ul(failures),
             html.Details([html.Summary(f'Cần rà soát ({len(issues)} mục; hiển thị tối đa 100, JSON chứa toàn bộ)'),
                           html.Ul([html.Li(f"{d['filename']} / trang {i.get('pdf_page')}: {i.get('code')} — {i.get('details')}") for d, i in issues[:100]])]),
@@ -394,6 +431,7 @@ def register_upload_callbacks(app, root):
             return no_update, 'Chưa có kết quả để tải.'
         try:
             exported = export_result(result)
+            exported['human_review'] = review_export(result, root)
         except (ValueError, OSError) as exc:
             return no_update, str(exc)
         filename = download_filename(result)
@@ -416,6 +454,15 @@ def register_upload_callbacks(app, root):
             provenance_path = Path(root) / 'config/bsr_verified_sources_20261016.json'
             provenance = json.loads(provenance_path.read_text(encoding='utf-8')) if provenance_path.is_file() else {}
             summary = build_delivery(result, destination, source_info=provenance)
+            from src.extraction.source_v2 import atomic_json
+            reviews = review_export(result, root)
+            atomic_json(destination / 'notes/human_review.json', reviews)
+            queue = json.loads((destination / 'notes/demo_review_queue.json').read_text(encoding='utf-8'))
+            affected = {x['current']['snapshot']['record_id']: x['current']['revision'] for x in reviews['entries']}
+            invalidations = [{'pair_id': pair['pair_id'], 'status': 'NeedsReview', 'reason': 'Human review/correction event; recheck before use.',
+                              'affected_record_ids': [pair[side]['record_id'] for side in ('esg', 'financial') if pair[side]['record_id'] in affected]}
+                             for pair in queue['candidate_pairs'] if any(pair[side]['record_id'] in affected for side in ('esg', 'financial'))]
+            atomic_json(destination / 'notes/dependency_invalidations.json', invalidations)
             archive = zip_delivery(destination)
         except (ValueError, OSError, KeyError) as exc:
             return no_update, f'Chưa tạo được gói đạt hợp đồng: {exc}'
@@ -430,7 +477,7 @@ def register_upload_callbacks(app, root):
                   Input('analysis-job', 'data'), Input('analysis-records', 'data'), Input('analysis-poll', 'n_intervals'))
     def presentation(job, rows, tick):
         result = job_result(job, root)
-        summary = session_summary(result)
+        summary = session_summary(reviewed_result(result, root))
         counts = [str(summary[key]) for key in ('reports', 'claims', 'reviewed', 'unreviewed')] if summary else ['—'] * 4
         rows = rows or []
         companies = sorted({r['company'] for r in rows if r.get('company')})
@@ -466,3 +513,4 @@ def register_upload_callbacks(app, root):
         if (button && !button.disabled) button.click();
         return 'Đã yêu cầu thử lại với file đã chọn.';
     }""", Output('ui-retry-feedback', 'children'), Input('ui-retry', 'n_clicks'), prevent_initial_call=True)
+    register_review_callbacks(app, root, job_result, selected_source, source_pdf)

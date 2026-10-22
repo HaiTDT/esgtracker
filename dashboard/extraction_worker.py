@@ -80,11 +80,14 @@ def load_job(root, job_id):
 
 
 def run_isolated_upload(root, job_id, contents, filenames, company=None, year=None,
-                        report_type=None, progress_callback=None, number_format='auto', *, worker_script=None):
+                        report_type=None, progress_callback=None, number_format='auto', *, worker_script=None,
+                        engine='docling', cloud_consent=False, gemini_model=None, max_api_requests=10):
     folder = job_folder(root, job_id)
     folder.mkdir(parents=True, exist_ok=False)
     request = {'root': str(Path(root).resolve()), 'contents': contents, 'filenames': filenames,
                'company': company, 'year': year, 'report_type': report_type, 'number_format': number_format}
+    if engine != 'docling':
+        request.update(engine=engine, cloud_consent=cloud_consent, gemini_model=gemini_model, max_api_requests=max_api_requests)
     atomic_json(folder / 'request.json', request)
     atomic_json(folder / 'status.json', {'status': 'running', 'supervisor_pid': os.getpid(),
         'progress': {'stage': 'queued'}, 'updated_at': now()})

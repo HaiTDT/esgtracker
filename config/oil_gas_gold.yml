@@ -1,0 +1,404 @@
+schema_version: oil-gas-codebook/1.0
+status: analyst_authored_pending_domain_review
+verified_on: '2026-10-21'
+purpose: Extraction and semantic annotation, not compliance certification or greenwashing verdict.
+copyright: Original Vietnamese summaries and disclosure identifiers only; obtain authoritative standards from their publishers.
+frameworks:
+  GRI: Impact materiality; sector topics guide materiality assessment, not a universal compulsory KPI checklist.
+  SASB: Industry-specific investor information; select industries from actual activities, not ticker alone.
+  IFRS: IFRS Sustainability S1/S2, not an assertion that VAS financial statements comply with IFRS Accounting Standards.
+sources:
+  gri11:
+    url: https://globalreporting.org/standards/standards-development/sector-standard-for-oil-and-gas-gri-11/
+    edition: '2021; local V1.1 published 2026-01-01'
+    access: local_pdf_and_official_page
+    locator: 'V1.1 physical p3 history of updates; original sector standard effective 2023-01-01'
+    caution: V1.1 climate/energy replacement effective 2027; biodiversity replacement effective 2026. Do not backdate replacements.
+  gri2:
+    url: https://www.globalreporting.org/publications/documents/english/gri-2-general-disclosures-2021/
+    edition: '2021'
+    access: local_pdf
+    locator: '2-2 p9; 2-3 p10; 2-4 p11; 2-7 p15; 2-8 p18; 2-9'
+  gri3:
+    url: https://www.globalreporting.org/publications/documents/english/gri-3-material-topics-2021/
+    edition: '2021'
+    access: local_pdf
+    locator: '3-1, 3-2, 3-3'
+  gri302:
+    url: https://www.globalreporting.org/publications/documents/english/gri-302-energy-2016/
+    edition: '2016'
+    access: official_html
+    locator: '302-1, 302-2, 302-3'
+  gri305:
+    url: https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/
+    edition: '2016'
+    access: official_html
+    locator: '305-1 through 305-5; 305-7 air pollutants'
+  gri303:
+    url: https://www.globalreporting.org/publications/documents/english/gri-303-water-and-effluents-2018/
+    edition: '2018'
+    access: local_pdf
+    locator: '303-3 physical p11; 303-4 p13; 303-5'
+  gri306:
+    url: https://www.globalreporting.org/publications/documents/english/gri-306-waste-2020/
+    edition: '2020'
+    access: official_html
+    locator: '306-3 generated; 306-4 diverted; 306-5 disposal'
+  gri306_old:
+    url: https://www.globalreporting.org/publications/documents/english/gri-306-effluents-and-waste-2016/
+    edition: '2016'
+    access: local_pdf
+    locator: '306-3 significant spills; not the 2020 waste-generated disclosure'
+  gri403:
+    url: https://www.globalreporting.org/publications/documents/english/gri-403-occupational-health-and-safety-2018/
+    edition: '2018'
+    access: official_html
+    locator: '403-9 work-related injuries; rates require hours worked and rate base'
+  gri404:
+    url: https://www.globalreporting.org/publications/documents/english/gri-404-training-and-education-2016/
+    edition: '2016'
+    access: official_html
+    locator: '404-1 average training hours per employee, gender and employee category'
+  gri205:
+    url: https://www.globalreporting.org/publications/documents/english/gri-205-anti-corruption-2016/
+    edition: '2016'
+    access: official_html
+    locator: '205-3 confirmed incidents and actions'
+  gri102:
+    url: https://www.globalreporting.org/standards/standards-development/topic-standard-for-climate-change-and-energy/
+    edition: '2025'
+    access: local_pdf_and_official_page
+    locator: '102-5 Scope 1; 102-6 Scope 2; 102-7 Scope 3'
+  gri103:
+    url: https://www.globalreporting.org/publications/documents/english/gri-103-energy-2025/
+    edition: '2025'
+    access: local_pdf_and_official_page
+    locator: '103-2 within; 103-3 outside; 103-4 intensity'
+  gri101:
+    url: https://www.globalreporting.org/publications/documents/english/gri-101-biodiversity-2024-english/
+    edition: '2024'
+    access: local_pdf_and_official_page
+    locator: '101-1 through 101-8; do not substitute for GRI 304 retrospectively'
+  sasb_archive:
+    url: https://sasb.ifrs.org/archive/standard-setting/
+    edition: '2023-06 and 2023-12; confirm exact industry edition before release'
+    access: official_index_only_full_protocol_not_acquired
+    locator: 'Oil & Gas EM-EP, EM-MD, EM-RM, EM-SV'
+    caution: Exact SASB protocols require a lawful copy via publisher Navigator; no exposure draft treated as final.
+  s2_rm:
+    url: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards-issb/english/2023/issued/part-b/ifrs-s2-ibg-volume-13-oil-and-gas-refining-and-marketing-part-b.pdf
+    edition: 'IFRS S2 Industry-based Guidance June 2023, Volume 13'
+    access: official_search_index_excerpt_only_full_text_requires_sign_in
+    locator: 'EM-RM-110a.1 and EM-RM-140a.1'
+    caution: Supports candidate identifiers only. IFRS industry guidance is not the complete SASB Standard.
+  s1s2:
+    url: https://www.ifrs.org/sustainability/knowledge-hub/introduction-to-issb-and-ifrs-sustainability-disclosure-standards/
+    edition: 'S1/S2 issued June 2023'
+    access: official_implementation_page
+    locator: 'reporting entity, materiality, SASB applicability, GHG Protocol'
+  s2:
+    url: https://www.ifrs.org/supporting-implementation/supporting-materials-for-ifrs-sustainability-disclosure-standards/ifrs-s2/
+    edition: 'June 2023'
+    access: official_implementation_page_and_indexed_issued_text
+    locator: 'S2 5-7 governance; 8-23 strategy; 25-26 risk; 29 metrics; 33-37 targets'
+  s2_amendments:
+    url: https://www.ifrs.org/news-and-events/news/2025/12/issb-issues-targeted-amendments-ifrs-s2/
+    edition: 'December 2025 amendments'
+    access: official_page
+    locator: 'effective periods beginning 2027-01-01; early application permitted'
+profiles:
+  historical_2023_2025:
+    description: Reporting-year selection aid only. Confirm actual publication date, declared edition and early adoption per report.
+    gri_climate_energy: [gri305, gri302]
+    gri_universal: [gri2, gri3]
+    biodiversity: 'GRI 304:2016 candidate; if published from 2026-01-01 assess GRI 101:2024 instead'
+    sasb: 'June 2023 climate update / December 2023 international update; edition must be evidenced, not inferred from year'
+    ifrs: 'S1/S2 effective annual periods starting 2024-01-01, earlier application conditional; legal adoption not inferred'
+  transition_2026:
+    description: 'GRI 101:2024 effective publication on/after 2026-01-01; climate and energy replacements not yet mandatory by date alone'
+    gri_climate_energy: [gri305, gri302]
+    biodiversity: gri101
+  forward_2027:
+    description: 'GRI 102/103 effective publication on/after 2027-01-01; S2 amendments effective periods starting 2027-01-01, different date basis'
+    gri_climate_energy: [gri102, gri103]
+    biodiversity: gri101
+industries:
+  EM-RM: {name: Refining and Marketing, support: primary_demo_candidate_mapping, caution: Confirm actual activities; BSR is a demo, not a universal Oil profile.}
+  EM-EP: {name: Exploration and Production, support: GRI_core_only_SASB_protocol_pending}
+  EM-MD: {name: Midstream, support: GRI_core_only_SASB_protocol_pending}
+  EM-SV: {name: Services, support: GRI_core_only_SASB_protocol_pending}
+common_qualifiers: [period_start, period_end, measurement_date, year_basis, raw_unit, raw_scale, normalized_unit, conversion_formula, reporting_entity, consolidation, included_entities, excluded_entities, boundary_method, restatement, method]
+metrics:
+  employee_count:
+    label: Số nhân viên; không mặc định headcount cuối kỳ
+    kind: measurement
+    aliases: [employee_headcount_at_date, EMPLOYEE_COUNT, TOTAL_EMPLOYEES, HEADCOUNT, EMPLOYEES]
+    refs: [{source: gri2, disclosure: 2-7-a, relationship: component_of}]
+    units: [people, FTE]
+    qualifiers: [population, counting_method, timing_basis, gender, region]
+    exclude: [employee_payables, employee_advances, sales_staff_expense, management_staff_expense]
+  non_employee_workers:
+    label: Người làm việc không phải nhân viên, công việc do tổ chức kiểm soát
+    kind: measurement
+    aliases: []
+    refs: [{source: gri2, disclosure: 2-8, relationship: component_of}]
+    units: [people, FTE]
+    qualifiers: [population, counting_method, timing_basis, work_control]
+  scope1_gross:
+    label: Phát thải gộp Phạm vi 1
+    kind: measurement
+    aliases: [GHG_SCOPE_1]
+    refs: [{source: gri305, disclosure: 305-1, relationship: component_of}, {source: s2, disclosure: '29(a)(i)(1)', relationship: conditional_overlap}, {source: sasb_archive, disclosure: EM-RM-110a.1, relationship: protocol_pending}, {source: s2_rm, disclosure: EM-RM-110a.1, relationship: candidate_component}]
+    future_refs: [{source: gri102, disclosure: 102-5, relationship: component_of}]
+    units: [tCO2e]
+    qualifiers: [gross_or_net, gases, gwp_source, ghg_boundary_method, biogenic_separate, emission_factors]
+  scope2_location:
+    label: Phát thải Phạm vi 2 theo địa điểm
+    kind: measurement
+    aliases: [GHG_SCOPE_2]
+    refs: [{source: gri305, disclosure: 305-2-a, relationship: component_of}, {source: s2, disclosure: '29(a)(v)', relationship: conditional_overlap}]
+    future_refs: [{source: gri102, disclosure: 102-6, relationship: component_of}]
+    units: [tCO2e]
+    qualifiers: [scope2_basis, gases, gwp_source, ghg_boundary_method, contractual_instruments]
+  scope2_market:
+    label: Phát thải Phạm vi 2 theo thị trường
+    kind: measurement
+    aliases: [GHG_SCOPE_2]
+    refs: [{source: gri305, disclosure: 305-2-b, relationship: component_of}]
+    future_refs: [{source: gri102, disclosure: 102-6, relationship: component_of}]
+    units: [tCO2e]
+    qualifiers: [scope2_basis, gases, gwp_source, ghg_boundary_method, contractual_instruments]
+  scope3_gross:
+    label: Phát thải gộp Phạm vi 3
+    kind: measurement
+    aliases: [GHG_SCOPE_3]
+    refs: [{source: gri305, disclosure: 305-3, relationship: component_of}, {source: s2, disclosure: '29(a)(vi)', relationship: conditional_overlap}]
+    future_refs: [{source: gri102, disclosure: 102-7, relationship: component_of}]
+    units: [tCO2e]
+    qualifiers: [scope3_categories, exclusions, gases, gwp_source, ghg_boundary_method]
+  ghg_intensity:
+    label: Cường độ phát thải; giữ nguyên tử và mẫu số
+    kind: measurement
+    aliases: [GHG_INTENSITY]
+    refs: [{source: gri305, disclosure: 305-4, relationship: component_of}]
+    units: [ratio]
+    qualifiers: [numerator, denominator, scopes_included, denominator_unit]
+  energy_within:
+    label: Năng lượng tiêu thụ trong tổ chức
+    kind: measurement
+    aliases: [ENERGY_TOTAL]
+    refs: [{source: gri302, disclosure: 302-1, relationship: component_of}]
+    future_refs: [{source: gri103, disclosure: 103-2, relationship: conditional_overlap}]
+    units: [GJ]
+    qualifiers: [energy_types, renewable_breakdown, sold_energy, heating_values, double_counting]
+  energy_outside:
+    label: Năng lượng tiêu thụ ngoài tổ chức
+    kind: measurement
+    aliases: []
+    refs: [{source: gri302, disclosure: 302-2, relationship: component_of}]
+    future_refs: [{source: gri103, disclosure: 103-3, relationship: conditional_overlap}]
+    units: [GJ]
+    qualifiers: [value_chain_categories, heating_values]
+  energy_intensity:
+    label: Cường độ năng lượng
+    kind: measurement
+    aliases: [ENERGY_INTENSITY]
+    refs: [{source: gri302, disclosure: 302-3, relationship: component_of}]
+    future_refs: [{source: gri103, disclosure: 103-4, relationship: conditional_overlap}]
+    units: [ratio]
+    qualifiers: [numerator, denominator, energy_types, denominator_unit]
+  water_withdrawal:
+    label: Lượng nước lấy vào; không phải nước tiêu thụ
+    kind: measurement
+    aliases: [WATER_WITHDRAWAL]
+    refs: [{source: gri303, disclosure: 303-3, relationship: component_of}, {source: sasb_archive, disclosure: EM-RM-140a.1, relationship: protocol_pending}, {source: s2_rm, disclosure: EM-RM-140a.1, relationship: candidate_component}]
+    units: [m3]
+    qualifiers: [water_sources, freshwater_definition, water_stress_tool, water_stress_class]
+  water_discharge:
+    label: Lượng nước xả
+    kind: measurement
+    aliases: [WATER_DISCHARGE]
+    refs: [{source: gri303, disclosure: 303-4, relationship: component_of}]
+    units: [m3]
+    qualifiers: [destinations, freshwater_definition, treatment, priority_substances]
+  water_consumption:
+    label: Lượng nước tiêu thụ; không suy bằng lấy vào nếu thiếu dữ liệu xả/tồn trữ
+    kind: measurement
+    aliases: [WATER_CONSUMPTION]
+    refs: [{source: gri303, disclosure: 303-5, relationship: component_of}, {source: sasb_archive, disclosure: EM-RM-140a.1, relationship: protocol_pending}, {source: s2_rm, disclosure: EM-RM-140a.1, relationship: candidate_component}]
+    units: [m3]
+    qualifiers: [water_stress_tool, water_stress_class, storage_change, measurement_method]
+  waste_generated_hazardous:
+    label: Chất thải nguy hại phát sinh
+    kind: measurement
+    aliases: [HAZARDOUS_WASTE]
+    refs: [{source: gri306, disclosure: 306-3, relationship: component_of}]
+    units: [t]
+    qualifiers: [hazard_classification, composition, waste_flow]
+  waste_generated_nonhazardous:
+    label: Chất thải không nguy hại phát sinh
+    kind: measurement
+    aliases: [NON_HAZ_WASTE]
+    refs: [{source: gri306, disclosure: 306-3, relationship: component_of}]
+    units: [t]
+    qualifiers: [hazard_classification, composition, waste_flow]
+  waste_diverted:
+    label: Chất thải chuyển khỏi thải bỏ; không đồng nghĩa tất cả đều tái chế
+    kind: measurement
+    aliases: []
+    refs: [{source: gri306, disclosure: 306-4, relationship: component_of}]
+    units: [t]
+    qualifiers: [hazard_classification, recovery_operation, onsite_offsite, waste_flow]
+  waste_disposal:
+    label: Chất thải đưa đi thải bỏ
+    kind: measurement
+    aliases: []
+    refs: [{source: gri306, disclosure: 306-5, relationship: component_of}]
+    units: [t]
+    qualifiers: [hazard_classification, disposal_operation, onsite_offsite, waste_flow]
+  significant_spills:
+    label: Sự cố tràn đổ đáng kể; phân biệt số vụ và thể tích
+    kind: measurement
+    aliases: [SPILL_COUNT]
+    refs: [{source: gri306_old, disclosure: 306-3, relationship: component_of}]
+    units: [count, m3, t]
+    qualifiers: [significance_threshold, spill_material, count_or_volume, location, impact]
+  injury_recordable_rate:
+    label: Tỷ suất thương tích ghi nhận; xác nhận 200.000 hay 1.000.000 giờ
+    kind: measurement
+    aliases: [TRIR]
+    refs: [{source: gri403, disclosure: 403-9, relationship: component_of}]
+    units: [rate]
+    qualifiers: [population, numerator, hours_worked, rate_base, injury_definition]
+  lost_time_rate:
+    label: Tỷ suất mất thời gian lao động do chấn thương
+    kind: measurement
+    aliases: [LTIFR]
+    refs: [{source: gri403, disclosure: 403-9, relationship: related_not_equivalent}]
+    units: [rate]
+    qualifiers: [population, numerator, hours_worked, rate_base, injury_definition]
+  work_fatalities:
+    label: Tử vong do thương tích liên quan công việc
+    kind: measurement
+    aliases: [FATALITIES]
+    refs: [{source: gri403, disclosure: 403-9, relationship: component_of}]
+    units: [people, count]
+    qualifiers: [population, cause, employee_contractor_split]
+  training_average:
+    label: Giờ đào tạo bình quân mỗi nhân viên; không nhầm với tổng giờ
+    kind: measurement
+    aliases: [TRAINING_HOURS]
+    refs: [{source: gri404, disclosure: 404-1, relationship: component_of}]
+    units: [hours/employee]
+    qualifiers: [numerator, denominator, gender, employee_category, counting_method]
+  governance_composition:
+    label: Cơ cấu cơ quan quản trị cao nhất
+    kind: governance
+    aliases: [BOARD_INDEPENDENCE, FEMALE_BOARD]
+    refs: [{source: gri2, disclosure: 2-9, relationship: component_of}]
+    units: [people, percent]
+    qualifiers: [governing_body, independence_definition, numerator, denominator, measurement_date]
+  corruption_confirmed:
+    label: Vụ tham nhũng đã xác nhận; không gộp cáo buộc chưa xác nhận
+    kind: measurement
+    aliases: [CORRUPTION_INCIDENTS]
+    refs: [{source: gri205, disclosure: 205-3, relationship: component_of}]
+    units: [count]
+    qualifiers: [confirmation_status, actions, case_population]
+  material_topic_policy_action:
+    label: Chính sách, hành động và hiệu quả quản lý chủ đề trọng yếu
+    kind: policy_action
+    aliases: []
+    refs: [{source: gri3, disclosure: 3-3, relationship: component_of}]
+    units: [text]
+    qualifiers: [topic, owner, implementation_status, time_horizon, outcomes, stakeholders]
+  climate_governance:
+    label: Giám sát quản trị và vai trò quản lý liên quan khí hậu
+    kind: governance
+    aliases: []
+    refs: [{source: s2, disclosure: '5-7', relationship: component_of}]
+    units: [text]
+    qualifiers: [governing_body, responsibilities, skills, reporting_frequency, oversight_process]
+  climate_strategy:
+    label: Rủi ro, cơ hội, chiến lược và khả năng chống chịu khí hậu
+    kind: claim
+    aliases: []
+    refs: [{source: s2, disclosure: '8-23', relationship: component_of}]
+    units: [text]
+    qualifiers: [risk_type, time_horizon, scenario, assumptions, value_chain, financial_effects]
+  climate_risk_management:
+    label: Quy trình nhận diện, đánh giá và quản lý rủi ro khí hậu
+    kind: policy_action
+    aliases: []
+    refs: [{source: s2, disclosure: '25-26', relationship: component_of}]
+    units: [text]
+    qualifiers: [risk_process, prioritization, integration, changes]
+  climate_target:
+    label: Mục tiêu khí hậu; không coi mục tiêu là kết quả thực hiện
+    kind: target
+    aliases: []
+    refs: [{source: s2, disclosure: '33-37', relationship: component_of}]
+    units: [text, percent, tCO2e, ratio]
+    qualifiers: [target_year, base_year, base_value, absolute_or_intensity, gross_or_net, scopes_included, milestones, validation, credits_use]
+  climate_capital_deployment:
+    label: Vốn triển khai cho rủi ro/cơ hội khí hậu; không đồng nhất CAPEX môi trường
+    kind: measurement
+    aliases: [ENV_CAPEX]
+    refs: [{source: s2, disclosure: '29(e)', relationship: related_not_equivalent}]
+    units: [currency]
+    qualifiers: [currency, accounting_framework, capital_or_financing_or_investment, climate_link, financial_class]
+  financial_employee_payables:
+    label: Phải trả người lao động; số dư tiền, negative control cho headcount
+    kind: financial_measurement
+    aliases: [employee_payables]
+    refs: [{source: gri2, disclosure: 2-7, relationship: not_equivalent}]
+    units: [currency]
+    qualifiers: [currency, accounting_framework, financial_class]
+  financial_employee_advances:
+    label: Tạm ứng cho nhân viên; số dư tiền, negative control cho headcount
+    kind: financial_measurement
+    aliases: [employee_advances]
+    refs: [{source: gri2, disclosure: 2-7, relationship: not_equivalent}]
+    units: [currency]
+    qualifiers: [currency, accounting_framework, financial_class]
+discovery_hints:
+  employee_count: 'tổng số lao động|tổng số nhân viên|number of employees|headcount'
+  scope1_gross: 'phạm vi 1|scope 1'
+  scope2_location: 'phạm vi 2|scope 2'
+  scope2_market: 'phạm vi 2|scope 2'
+  scope3_gross: 'phạm vi 3|scope 3'
+  ghg_intensity: 'cường độ phát thải|emissions intensity'
+  energy_within: 'tổng năng lượng|năng lượng tiêu thụ|energy consumption'
+  energy_intensity: 'cường độ năng lượng|energy intensity'
+  water_withdrawal: 'nước khai thác|nước đầu vào|nước lấy vào|water withdrawn|water withdrawal'
+  water_discharge: 'nước thải|nước xả|water discharge'
+  water_consumption: 'nước tiêu thụ|water consumed|water consumption'
+  waste_generated_hazardous: 'chất thải nguy hại|hazardous waste'
+  waste_generated_nonhazardous: 'chất thải thông thường|chất thải không nguy hại|non-hazardous waste'
+  waste_diverted: 'chất thải.*tái chế|waste diverted'
+  waste_disposal: 'chất thải.*thải bỏ|waste disposal'
+  significant_spills: 'tràn dầu|tràn đổ|oil spill'
+  injury_recordable_rate: 'trir|recordable|thương tích ghi nhận'
+  lost_time_rate: 'ltifr|lost time|tai nạn.*mất ngày'
+  work_fatalities: 'tử vong|fatalit'
+  training_average: 'giờ đào tạo|training hours'
+  governance_composition: 'hội đồng quản trị|hđqt|board composition'
+  corruption_confirmed: 'tham nhũng|corruption'
+  material_topic_policy_action: 'chính sách|policy|hành động|action plan'
+  climate_governance: '(giám sát|quản trị).*(khí hậu|climate)'
+  climate_strategy: 'biến đổi khí hậu|climate risk|khả năng chống chịu'
+  climate_risk_management: '(quản lý|quản trị).*(rủi ro khí hậu)|climate risk management'
+  climate_target: '(mục tiêu|cam kết).*(phát thải|khí hậu)|net zero'
+negative_controls:
+  - {left: financial_employee_payables, right: employee_count, reason: Money liability versus people/FTE.}
+  - {left: financial_employee_advances, right: employee_count, reason: Monetary advance versus people/FTE.}
+  - {left: water_withdrawal, right: water_consumption, reason: Different flows even if both expressed in m3.}
+  - {left: scope2_location, right: scope2_market, reason: Different emission-factor basis.}
+  - {left: waste_generated_hazardous, right: waste_disposal, reason: Generated versus disposal and potentially different hazard population.}
+  - {left: lost_time_rate, right: injury_recordable_rate, reason: Different injury definitions; rate denominator alone does not establish equivalence.}
+release_policy:
+  minimum_independent_annotators: 2
+  required: [PDF_sha256, physical_page, anchor, verbatim_evidence, unknown_reasons, independent_annotations, adjudication, development_split_check]
+  no_auto_gold: true
+  sasb_protocol_pending_blocks_standard_equivalence_claim: true
+  all_relationships_require_domain_review: true

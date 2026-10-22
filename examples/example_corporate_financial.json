@@ -1,0 +1,468 @@
+{
+  "schema_version": "corporate-extract-1.0",
+  "document": {
+    "document_id": "report_c574c609f5473ccb846695e9f42056b0a771924b3912570464ddf52ed9c5d286",
+    "company_id": "SYNTH",
+    "report_type": "Financial",
+    "source_document_type": "financial_statement",
+    "report_year": 2025,
+    "financial_scope": "Separate",
+    "reporting_entity": null,
+    "reporting_period_start": null,
+    "reporting_period_end": null,
+    "publication_date": null,
+    "source": {
+      "source_id": "source_a87abb455a1f8e14f46577dcaec836fcdd4a17b957265e407004330a0e0611a0",
+      "file_name": "SYNTHETIC_financial_statements_2025.pdf",
+      "url": null,
+      "downloaded_at_utc": null,
+      "sha256": "c574c609f5473ccb846695e9f42056b0a771924b3912570464ddf52ed9c5d286",
+      "page_count": 1,
+      "page_system": "physical_pdf_page_1_based"
+    }
+  },
+  "coverage": {
+    "status": "partial",
+    "scope_description": "Candidate extraction over retained page checkpoints; semantic completeness, topic search and human review pending.",
+    "search_status": "not_searched",
+    "pages_checked": [
+      1
+    ],
+    "pages_unreadable": [],
+    "topics_searched": [],
+    "search_outcomes": [
+      {
+        "topic": "emissions",
+        "status": "not_searched",
+        "pages": [],
+        "reason": "No confirmed topic search completion; missing keyword alone is not disclosure absence."
+      },
+      {
+        "topic": "workforce",
+        "status": "not_searched",
+        "pages": [],
+        "reason": "No confirmed topic search completion; missing keyword alone is not disclosure absence."
+      },
+      {
+        "topic": "board",
+        "status": "not_searched",
+        "pages": [],
+        "reason": "No confirmed topic search completion; missing keyword alone is not disclosure absence."
+      },
+      {
+        "topic": "financial_esg_notes",
+        "status": "not_searched",
+        "pages": [],
+        "reason": "No confirmed topic search completion; missing keyword alone is not disclosure absence."
+      }
+    ]
+  },
+  "records": [
+    {
+      "record_id": "record_432318a6f7a087514934f3496ad4663b39fbeac5c439147235f1e83e9013e942",
+      "dimension": "X",
+      "record_type": "financial_measurement",
+      "topic": "note_table",
+      "metric_id": null,
+      "metric_label": "Doanh thu thuần",
+      "metric_definition": null,
+      "statement": {
+        "original_quote": "100",
+        "interpretation": null,
+        "assertion_kind": "reported_result"
+      },
+      "value": {
+        "status": "available",
+        "original_value": "100",
+        "original_unit": "VND",
+        "original_scale": null,
+        "normalized_value": 100,
+        "normalized_unit": "VND",
+        "normalization_factor": 1,
+        "normalization_note": "Base value = parsed source amount × normalization_factor, exactly once."
+      },
+      "period": {
+        "observation_year": 2025,
+        "observation_start": null,
+        "observation_end": null,
+        "measurement_date": null,
+        "period_type": "unknown",
+        "year_basis": "table_header",
+        "baseline_year": null,
+        "target_deadline": null
+      },
+      "boundary": {
+        "reporting_entity": null,
+        "consolidation": "Separate",
+        "scope": null,
+        "population": null,
+        "counting_method": null,
+        "calculation_method": null,
+        "verified": false
+      },
+      "restatement": {
+        "status": "unknown",
+        "note": null
+      },
+      "evidence": [
+        {
+          "evidence_id": "handoff_evidence_12d7185e3a2e3b7711968f14c7530f47fe3b70d2294e87bb6ff3134beb557ac1",
+          "source_sha256": "c574c609f5473ccb846695e9f42056b0a771924b3912570464ddf52ed9c5d286",
+          "physical_page": 1,
+          "printed_page": null,
+          "exact_quote": "100",
+          "context_text": "100\n2025\n10\nMã số\nDoanh thu thuần\nBÁO CÁO TÀI CHÍNH RIÊNG\nĐơn vị tính: VND",
+          "section": null,
+          "element_id": "/document/tables/0/data/table_cells/6",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null,
+          "table_id": "anchor_2b256a881aaf3a2366cd44503c6b4dcf929149edc8816e155c2a07dc2c77864b",
+          "row": 1,
+          "column": 2,
+          "headers": [
+            {
+              "role": "year",
+              "text": "2025",
+              "physical_page": 1,
+              "row": 0,
+              "column": 2,
+              "bbox": null
+            },
+            {
+              "role": "unit",
+              "text": "Đơn vị tính: VND",
+              "physical_page": 1,
+              "row": null,
+              "column": null,
+              "bbox": null
+            },
+            {
+              "role": "row_label",
+              "text": "Doanh thu thuần",
+              "physical_page": 1,
+              "row": 1,
+              "column": 0,
+              "bbox": null
+            },
+            {
+              "role": "row_label",
+              "text": "10",
+              "physical_page": 1,
+              "row": 1,
+              "column": 1,
+              "bbox": null
+            },
+            {
+              "role": "row_label",
+              "text": "Mã số",
+              "physical_page": 1,
+              "row": 0,
+              "column": 1,
+              "bbox": null
+            }
+          ],
+          "footnotes": []
+        }
+      ],
+      "quality": {
+        "extraction_method": "rule",
+        "parser_name": "Source-bound Docling/PyMuPDF (see checkpoint read_method) + esg-financial-candidates/2.3.0 + corporate-handoff/1.0",
+        "model_id": null,
+        "prompt_version": null,
+        "uncertainty": [
+          "footnote_completeness_not_verified",
+          "metric_definition_not_verified",
+          "pending_human_source_review",
+          "reporting_boundary_not_verified",
+          "restatement_not_fully_searched"
+        ],
+        "review_status": "pending_human_review",
+        "reviewer": null,
+        "reviewed_at_utc": null,
+        "review_basis": null
+      },
+      "comparison_group_id": null
+    },
+    {
+      "record_id": "record_0cd8964bdf93afbe0a1ac57d09091aa3aeea9ba882a02a4e366b7c596986059d",
+      "dimension": "X",
+      "record_type": "financial_measurement",
+      "topic": "note_table",
+      "metric_id": null,
+      "metric_label": "Doanh thu thuần",
+      "metric_definition": null,
+      "statement": {
+        "original_quote": "90",
+        "interpretation": null,
+        "assertion_kind": "reported_result"
+      },
+      "value": {
+        "status": "available",
+        "original_value": "90",
+        "original_unit": "VND",
+        "original_scale": null,
+        "normalized_value": 90,
+        "normalized_unit": "VND",
+        "normalization_factor": 1,
+        "normalization_note": "Base value = parsed source amount × normalization_factor, exactly once."
+      },
+      "period": {
+        "observation_year": 2024,
+        "observation_start": null,
+        "observation_end": null,
+        "measurement_date": null,
+        "period_type": "unknown",
+        "year_basis": "table_header",
+        "baseline_year": null,
+        "target_deadline": null
+      },
+      "boundary": {
+        "reporting_entity": null,
+        "consolidation": "Separate",
+        "scope": null,
+        "population": null,
+        "counting_method": null,
+        "calculation_method": null,
+        "verified": false
+      },
+      "restatement": {
+        "status": "unknown",
+        "note": null
+      },
+      "evidence": [
+        {
+          "evidence_id": "handoff_evidence_1b5c36fcc9eb4a63379ba6918a7e8feb212a3b880481a939630d04f6ddb1a7bb",
+          "source_sha256": "c574c609f5473ccb846695e9f42056b0a771924b3912570464ddf52ed9c5d286",
+          "physical_page": 1,
+          "printed_page": null,
+          "exact_quote": "90",
+          "context_text": "90\n2024\n10\nMã số\nDoanh thu thuần\nBÁO CÁO TÀI CHÍNH RIÊNG\nĐơn vị tính: VND",
+          "section": null,
+          "element_id": "/document/tables/0/data/table_cells/7",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null,
+          "table_id": "anchor_2b256a881aaf3a2366cd44503c6b4dcf929149edc8816e155c2a07dc2c77864b",
+          "row": 1,
+          "column": 3,
+          "headers": [
+            {
+              "role": "year",
+              "text": "2024",
+              "physical_page": 1,
+              "row": 0,
+              "column": 3,
+              "bbox": null
+            },
+            {
+              "role": "unit",
+              "text": "Đơn vị tính: VND",
+              "physical_page": 1,
+              "row": null,
+              "column": null,
+              "bbox": null
+            },
+            {
+              "role": "row_label",
+              "text": "Doanh thu thuần",
+              "physical_page": 1,
+              "row": 1,
+              "column": 0,
+              "bbox": null
+            },
+            {
+              "role": "row_label",
+              "text": "10",
+              "physical_page": 1,
+              "row": 1,
+              "column": 1,
+              "bbox": null
+            },
+            {
+              "role": "row_label",
+              "text": "Mã số",
+              "physical_page": 1,
+              "row": 0,
+              "column": 1,
+              "bbox": null
+            }
+          ],
+          "footnotes": []
+        }
+      ],
+      "quality": {
+        "extraction_method": "rule",
+        "parser_name": "Source-bound Docling/PyMuPDF (see checkpoint read_method) + esg-financial-candidates/2.3.0 + corporate-handoff/1.0",
+        "model_id": null,
+        "prompt_version": null,
+        "uncertainty": [
+          "footnote_completeness_not_verified",
+          "metric_definition_not_verified",
+          "pending_human_source_review",
+          "reporting_boundary_not_verified",
+          "restatement_not_fully_searched"
+        ],
+        "review_status": "pending_human_review",
+        "reviewer": null,
+        "reviewed_at_utc": null,
+        "review_basis": null
+      },
+      "comparison_group_id": null
+    }
+  ],
+  "issue_log": [
+    {
+      "issue_id": "handoff_issue_060590de8edddfd431af5d7bcdcdebf433dc1401095cb3cf1a45bc2b3105823e",
+      "code": "RECORD_REQUIRES_REVIEW",
+      "message": "footnote_completeness_not_verified; metric_definition_not_verified; pending_human_source_review; reporting_boundary_not_verified; restatement_not_fully_searched",
+      "source_pages": [
+        1
+      ],
+      "record_id": "record_432318a6f7a087514934f3496ad4663b39fbeac5c439147235f1e83e9013e942",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_51dba8ae7e9c4d97bca6aab027b1bcd3d45023ba987f3ff473e0ce0c01ac51d0",
+      "code": "RECORD_REQUIRES_REVIEW",
+      "message": "footnote_completeness_not_verified; metric_definition_not_verified; pending_human_source_review; reporting_boundary_not_verified; restatement_not_fully_searched",
+      "source_pages": [
+        1
+      ],
+      "record_id": "record_0cd8964bdf93afbe0a1ac57d09091aa3aeea9ba882a02a4e366b7c596986059d",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_76e7d6c159841b1be061b7f885a6ed88634db2d8199960ecb027e0345615c304",
+      "code": "PERIOD_ROLE_UNKNOWN",
+      "message": "Not unambiguously established from source context.",
+      "source_pages": [
+        1
+      ],
+      "record_id": "record_432318a6f7a087514934f3496ad4663b39fbeac5c439147235f1e83e9013e942",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_87f1d1bc981631d957c8af41e042f8f7bcf72cf57dfbb6904eb3b86fce6b60a4",
+      "code": "PERIOD_ROLE_UNKNOWN",
+      "message": "Not unambiguously established from source context.",
+      "source_pages": [
+        1
+      ],
+      "record_id": "record_0cd8964bdf93afbe0a1ac57d09091aa3aeea9ba882a02a4e366b7c596986059d",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_ea1ff355ed6706881e31e0c32636131f1c59f7e6f691f76d46f5d95ed35da4c8",
+      "code": "METADATA_UNRESOLVED",
+      "message": "not_found_in_checked_scope",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_1d92459da3568d11020f56716f85d09208fc44194e5eda772be5450866e5ed36",
+      "code": "SOURCE_PROVENANCE_UNCONFIRMED",
+      "message": "Source URL absent; uploaded PDF not independently verified against official publication.",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_a6ce4ac37797aeb22e85f698463031bd9a03ad59c053e38296eabba549a8f561",
+      "code": "DOCUMENT_METADATA_REQUIRES_REVIEW",
+      "message": "Company/year/type supplied metadata must be checked against PDF. No cover-to-KPI boundary inheritance.",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "handoff_issue_909e295f10f5b9942b442f781506fb2bde4f5603f325437596fba8c32827193e",
+      "code": "SEARCH_COVERAGE_NOT_ADJUDICATED",
+      "message": "Found means a source keyword occurrence only. No topic absence or semantic search completeness asserted.",
+      "source_pages": [],
+      "record_id": null,
+      "status": "needs_review"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Opt-in CLI only. No model download, cloud fallback, or automatic UI activation.
+provider: ollama
+base_url: http://127.0.0.1:11434
+model: llama3:8b
+timeout_seconds: 180
+retries: 1
+num_ctx: 8192
+num_predict: 2048
+max_chunk_chars: 3500
+max_response_bytes: 8388608
+number_format: auto

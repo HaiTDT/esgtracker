@@ -26,7 +26,7 @@ def main():
     if v.main(['--manifest', str(folder/'manifest.json'), '--pdf-dir', str(folder/'pdf')]):
         return 1
     manifest = v.load_json(folder/'manifest.json')
-    errors, products, quotes, checkpoints = [], 0, 0, 0
+    errors, products, quotes, checkpoints, model_quotes = [], 0, 0, 0, 0
     if args.bsr_nine:
         expected = {(y, k, s) for y in (2023,2024,2025) for k,s in
                     (('ESG',None),('Financial','Separate'),('Financial','Consolidated'))}
@@ -41,7 +41,7 @@ def main():
         digest = row['pdf_sha256']
         original = v.load_json(folder/'notes/native'/f'{digest}.json')
         records = {r['record_id']:r for r in original['records']}
-        pages = {}
+        pages, model_batches = {}, {}
         for a in original['source_artifacts']:
             if a['kind'] != 'page_checkpoint':
                 continue
@@ -50,7 +50,10 @@ def main():
                 errors.append(f'{digest}: native_checkpoint_hash_mismatch')
                 continue
             page = v.load_json(path)
-            pages[page['pdf_page']] = page
+            if original.get('provider') == 'gemini_api':
+                model_batches[a['artifact_id']] = page
+            else:
+                pages[page['pdf_page']] = page
             checkpoints += 1
         for record in h['records']:
             if args.pending_only and (record['quality']['review_status'] != 'pending_human_review' or record['boundary']['verified']):
@@ -82,17 +85,28 @@ def main():
                     errors.append(f"{record['record_id']}: normalization_not_reproducible")
             for ev in record['evidence']:
                 try:
-                    target = pages[ev['physical_page']]
+                    if original.get('provider') == 'gemini_api':
+                        match = next(o for o in records[record['record_id']]['gemini_evidence']
+                                     if o['source']['pdf_page'] == ev['physical_page'] and
+                                     o['source']['native_json_pointer'] == ev['element_id'] and o['quote'] == ev['exact_quote'])
+                        target = model_batches[match['source']['artifact_id']]
+                    else:
+                        target = pages[ev['physical_page']]
                     for token in ev['element_id'].lstrip('/').split('/'):
                         token = token.replace('~1','/').replace('~0','~')
                         target = target[int(token)] if isinstance(target,list) else target[token]
-                    if ev['exact_quote'] not in target['text']:
-                        raise ValueError('quote mismatch')
-                    quotes += 1
+                    if original.get('provider') == 'gemini_api':
+                        if target != ev['exact_quote']:raise ValueError('model observation mismatch')
+                        model_quotes += 1
+                    else:
+                        if ev['exact_quote'] not in target['text']:raise ValueError('quote mismatch')
+                        quotes += 1
                 except Exception:
                     errors.append(f"{record['record_id']}: quote_not_resolved_in_native_checkpoint")
     report = {'created_at': datetime.now(timezone.utc).isoformat(), 'passed': not errors, 'errors': errors,
               'normalized_values_recomputed': products, 'native_quotes_checked': quotes,
+              'model_observation_quotes_checked': model_quotes,
+              'model_quote_scope': 'checkpoint integrity only, NOT independent PDF visual verification',
               'native_checkpoint_hashes_checked': checkpoints, 'human_semantic_review_pending': True}
     (folder/'validation/extra_checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False,indent=2))

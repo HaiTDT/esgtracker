@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inferred from export_result; documentation validator only",
+  "type": "object",
+  "required": ["schema_version", "pipeline", "document_count", "documents", "failures", "graph_ready", "semantic_status", "source_note"],
+  "properties": {
+    "schema_version": {"const": "esg-upload/2.0.0"},
+    "pipeline": {"enum": ["source-typed-v2", "gemini-pdf-v1"]},
+    "document_count": {"type": "integer", "minimum": 1},
+    "documents": {"type": "array", "items": {"type": "object", "required": ["document_index", "filename", "capture_status", "coverage", "output", "native_artifacts"], "properties": {
+      "document_index": {"type": "integer", "minimum": 0}, "filename": {"type": "string"},
+      "capture_status": {"type": "string"}, "coverage": {"type": "object"},
+      "output": {"type": "object"}, "native_artifacts": {"type": "object"}
+    }}},
+    "failures": {"type": "array"}, "graph_ready": {"const": false},
+    "semantic_status": {"const": "partial"}, "source_note": {"type": "string"}
+  }
+}

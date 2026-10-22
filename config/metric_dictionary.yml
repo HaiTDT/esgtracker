@@ -1,0 +1,69 @@
+version: metric-dictionary/1.0
+status: provisional_not_expert_validated
+basis: Analyst-authored rules; no normative authority inferred from a label match.
+legacy_esg_source: config/metrics.yml
+source_references: []
+local_metrics:
+  employee_payables:
+    topic: employee_payables_money
+    definition: 'Số dư khoản phải trả người lao động tại ngày đo, bằng tiền; không phải số người hoặc chi phí lương cả năm.'
+    pattern: 'phai tra nguoi lao dong'
+    units: [VND]
+    example: 'Phải trả người lao động'
+  employee_advances:
+    topic: employee_advances_money
+    definition: 'Số dư tạm ứng cho nhân viên tại ngày đo, bằng tiền; không phải số lượng nhân viên.'
+    pattern: 'tam ung cho nhan vien'
+    units: [VND]
+    example: 'Tạm ứng cho nhân viên'
+  sales_staff_expense:
+    topic: personnel_expense_money
+    definition: 'Chi phí nhân viên bán hàng trong kỳ, bằng tiền; không phải số người.'
+    pattern: 'chi phi nhan vien ban hang'
+    units: [VND]
+    example: 'Chi phí nhân viên bán hàng'
+  management_staff_expense:
+    topic: personnel_expense_money
+    definition: 'Chi phí nhân viên quản lý trong kỳ, bằng tiền; không phải số người.'
+    pattern: 'chi phi nhan vien quan ly'
+    units: [VND]
+    example: 'Chi phí nhân viên quản lý'
+  net_sales_revenue:
+    topic: financial_performance
+    definition: 'Doanh thu thuần bán hàng và cung cấp dịch vụ; không bao gồm doanh thu tài chính hoặc thu nhập khác.'
+    pattern: 'doanh thu thuan ve ban hang'
+    units: [VND]
+    example: 'Doanh thu thuần về bán hàng và cung cấp dịch vụ'
+  profit_after_tax:
+    topic: financial_performance
+    definition: 'Lợi nhuận sau thuế thu nhập doanh nghiệp của kỳ; không phải lợi nhuận chưa phân phối hoặc riêng phần thuộc cổ đông công ty mẹ.'
+    pattern: 'loi nhuan sau thue'
+    exclude: 'chua phan phoi|co dong|trich|quy|dieu chinh'
+    units: [VND]
+    example: 'Lợi nhuận sau thuế hợp nhất'
+  profit_before_tax:
+    topic: financial_performance
+    definition: 'Tổng lợi nhuận kế toán trước thuế thu nhập doanh nghiệp của kỳ.'
+    pattern: 'tong loi nhuan ke toan truoc thue'
+    units: [VND]
+    example: 'Tổng lợi nhuận kế toán trước thuế'
+  current_income_tax_expense:
+    topic: income_tax_expense
+    definition: 'Chi phí thuế thu nhập doanh nghiệp hiện hành ghi nhận trong kỳ, không phải tiền thuế đã nộp.'
+    pattern: 'chi phi thue thu nhap doanh nghiep.*hien hanh'
+    exclude: 'dieu chinh|tinh tren|phat sinh|hoan nhap'
+    units: [VND]
+    example: 'Chi phí thuế thu nhập doanh nghiệp hiện hành'
+  deferred_income_tax_expense:
+    topic: income_tax_expense
+    definition: 'Chi phí thuế thu nhập doanh nghiệp hoãn lại trong kỳ.'
+    pattern: 'chi phi thue thu nhap doanh nghiep.*hoan lai'
+    exclude: 'dieu chinh|tinh tren|phat sinh|hoan nhap'
+    units: [VND]
+    example: 'Chi phí thuế thu nhập doanh nghiệp hoãn lại'
+  employee_headcount_at_date:
+    topic: workforce_headcount
+    definition: 'Tổng số nhân viên/người lao động tại ngày đo; phạm vi người được tính và cách đếm phải kiểm tra riêng.'
+    pattern: '^(tong so lao dong|tong so nhan vien)$'
+    units: [people]
+    example: 'Tổng số lao động'

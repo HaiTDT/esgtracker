@@ -1,0 +1,4736 @@
+{
+  "schema_version": "esg-upload/2.0.0",
+  "pipeline": "source-typed-v2",
+  "document_count": 3,
+  "documents": [
+    {
+      "document_index": 0,
+      "filename": "SYNTHETIC_financial_statements_2025.pdf",
+      "capture_status": "completed",
+      "coverage": {
+        "total_pages": 1,
+        "counts": {
+          "processed": 1
+        },
+        "pages": [
+          {
+            "pdf_page": 1,
+            "status": "processed",
+            "attempts": 1
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "esg-financial-candidates/2.3.0",
+        "parser_version": 6,
+        "source_capture_sha256": "e1e28d30da32a6a50c095ca283ccdff325f6fb3fd71edb5036edac9fc09910ea",
+        "created_at": "2026-10-22T15:46:56.773324+00:00",
+        "number_format": "auto",
+        "graph_ready": false,
+        "semantic_status": "partial",
+        "source_capture_coverage": {
+          "total_pages": 1,
+          "counts": {
+            "processed": 1
+          },
+          "pages": [
+            {
+              "pdf_page": 1,
+              "status": "processed",
+              "attempts": 1
+            }
+          ]
+        },
+        "reports": [
+          {
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "source_filename": "SYNTHETIC_financial_statements_2025.pdf",
+            "source_sha256": "fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "source_access": "source.pdf",
+            "company_id": "SYNTH",
+            "report_type": "financial_statements",
+            "reporting_year": 2025,
+            "metadata_origin": "user_supplied_or_unknown",
+            "report_scope": null,
+            "publication_date": null,
+            "pdf_page_count": 1
+          }
+        ],
+        "source_artifacts": [
+          {
+            "artifact_id": "artifact_b1207571d2bd648764f792f42ce63795e5f1af53f3708c063bc6241c66443cc0",
+            "path": "source.pdf",
+            "sha256": "fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "kind": "pdf"
+          },
+          {
+            "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+            "path": "pages/0001.json",
+            "sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+            "kind": "page_checkpoint"
+          }
+        ],
+        "source_blocks": [
+          {
+            "block_id": "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df",
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "kind": "texts",
+            "label": "text",
+            "original_text": "BÁO CÁO TÀI CHÍNH RIÊNG",
+            "original_cells": null,
+            "source": {
+              "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+              "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+              "native_json_pointer": "/document/texts/0",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          },
+          {
+            "block_id": "anchor_23232ffdf65fa3e4795eff7df18d4a93115414d9da49fda41ad9b94e7cc56919",
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "kind": "texts",
+            "label": "text",
+            "original_text": "Đơn vị tính: VND",
+            "original_cells": null,
+            "source": {
+              "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+              "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+              "native_json_pointer": "/document/texts/1",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          },
+          {
+            "block_id": "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "kind": "tables",
+            "label": null,
+            "original_text": null,
+            "original_cells": [
+              {
+                "text": "Chỉ tiêu",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "Mã số",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "2025",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "2024",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 3,
+                "end_col_offset_idx": 4
+              },
+              {
+                "text": "Doanh thu thuần",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "10",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "90",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 3,
+                "end_col_offset_idx": 4
+              }
+            ],
+            "source": {
+              "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+              "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+              "native_json_pointer": "/document/tables/0",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          }
+        ],
+        "records": [
+          {
+            "record_id": "record_da7397298d2e9cad662d626d824941dc754db2426c0cd7f8115e8511dc13cbef",
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "record_type": "metric",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "financial",
+            "original_text": "Doanh thu thuần",
+            "original_cells": [
+              {
+                "text": "Doanh thu thuần",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "10",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "90",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 3,
+                "end_col_offset_idx": 4
+              }
+            ],
+            "source_refs": [
+              "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "unknown",
+              "topic_candidates": []
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "original_name": "Doanh thu thuần",
+              "code_candidates": [],
+              "definition": null,
+              "methodology": null,
+              "item_code_raw": "10",
+              "row_group_raw": null,
+              "statement_scope": "separate",
+              "logical_table_id": "logical_table_f238dfd4fe6a327f1324a01bd2425f66b1ae027d00adfde87afd855539e1f902",
+              "statement_type": "note_table",
+              "table_title_raw": null,
+              "note_number": null,
+              "note_heading_raw": null,
+              "normalized_name": "doanh thu thuan",
+              "normalization_method": "unicode_accent_case_whitespace_only_no_ocr_repair",
+              "note_reference_raw": null,
+              "parent_metric_id": null,
+              "hierarchy_status": "not_checked_without_explicit_formula"
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/item_code_raw": {
+                "status": "available",
+                "reason": "Observed row cell under explicit code header; physical header alignment used when grid is misindexed. Raw OCR not repaired."
+              },
+              "/payload/definition": {
+                "status": "unknown",
+                "reason": "Not extracted from financial notes yet."
+              },
+              "/payload/methodology": {
+                "status": "unknown",
+                "reason": "Not extracted from financial notes yet."
+              },
+              "/payload/statement_scope": {
+                "status": "available",
+                "reason": "Explicit financial statement label; not KPI legal-entity boundary.",
+                "basis": "page_statement"
+              },
+              "/payload/statement_type": {
+                "status": "available",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/table_title_raw": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/note_number": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/note_heading_raw": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/definition",
+              "/payload/methodology",
+              "/payload/note_heading_raw",
+              "/payload/note_number",
+              "/payload/table_title_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/payload/original_name": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/4",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Doanh thu thuần"
+                }
+              ],
+              "/payload/item_code_raw": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "10"
+                },
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "Mã số"
+                }
+              ],
+              "/payload/statement_scope": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_35511883e03b323b9b82edc6a833acf110d389efaff3c7bf64976f10764a957f",
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "record_type": "measurement",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "financial",
+            "original_text": "100",
+            "original_cells": [
+              {
+                "text": "2025",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "Doanh thu thuần",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              }
+            ],
+            "source_refs": [
+              "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df"
+            ],
+            "interpretation_notes": [],
+            "content_period": {
+              "raw_text": "2025",
+              "year": 2025,
+              "as_of_date": null,
+              "start_date": null,
+              "end_date": null,
+              "period_type": "year_label"
+            },
+            "classification": {
+              "pillar": "unknown",
+              "topic_candidates": []
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "metric_record_id": "record_da7397298d2e9cad662d626d824941dc754db2426c0cd7f8115e8511dc13cbef",
+              "row_label_raw": "Doanh thu thuần",
+              "column_headers_raw": [
+                "2025"
+              ],
+              "raw_value": "100",
+              "parsed_value": "100",
+              "unit": "VND",
+              "currency": "VND",
+              "scale": "1",
+              "unit_source_labels_raw": [
+                "Đơn vị tính: VND"
+              ],
+              "normalized_value": "100",
+              "period_role": null,
+              "statement_scope": "separate",
+              "item_code_raw": "10",
+              "row_index": 1,
+              "column_index": 2,
+              "table_anchor_id": "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "number_format": "auto",
+              "logical_table_id": "logical_table_f238dfd4fe6a327f1324a01bd2425f66b1ae027d00adfde87afd855539e1f902",
+              "statement_type": "note_table",
+              "table_title_raw": null,
+              "note_number": null,
+              "note_heading_raw": null,
+              "time_type": "year_label",
+              "restatement_status": "not_labelled",
+              "read_status": "available",
+              "verification_status": "needs_review"
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "available",
+                "reason": "Column/row label + PDF period evidence only; supplied year not used."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/item_code_raw": {
+                "status": "available",
+                "reason": "Observed row cell under explicit code header; physical header alignment used when grid is misindexed. Raw OCR not repaired."
+              },
+              "/payload/statement_scope": {
+                "status": "available",
+                "reason": "Explicit financial statement label; not KPI legal-entity boundary.",
+                "basis": "page_statement"
+              },
+              "/payload/period_role": {
+                "status": "unknown",
+                "reason": "Source-specific semantic mapping."
+              },
+              "/payload/unit": {
+                "status": "available",
+                "reason": "Source-specific semantic mapping."
+              },
+              "/payload/scale": {
+                "status": "available",
+                "reason": "Source-specific semantic mapping."
+              },
+              "/payload/statement_type": {
+                "status": "available",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/table_title_raw": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/note_number": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/note_heading_raw": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/payload/note_heading_raw",
+              "/payload/note_number",
+              "/payload/period_role",
+              "/payload/table_title_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/payload/raw_value": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/6",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/content_period": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/2",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "2025"
+                }
+              ],
+              "/payload/unit": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/item_code_raw": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "10"
+                },
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "Mã số"
+                }
+              ],
+              "/payload/statement_scope": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_fa90793af3b4f1209aee58d9fad6b29b2b08f25096c46d1754675e10c1db38a0",
+            "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "record_type": "measurement",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "financial",
+            "original_text": "90",
+            "original_cells": [
+              {
+                "text": "2024",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 3,
+                "end_col_offset_idx": 4
+              },
+              {
+                "text": "Doanh thu thuần",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "90",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 3,
+                "end_col_offset_idx": 4
+              }
+            ],
+            "source_refs": [
+              "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df"
+            ],
+            "interpretation_notes": [],
+            "content_period": {
+              "raw_text": "2024",
+              "year": 2024,
+              "as_of_date": null,
+              "start_date": null,
+              "end_date": null,
+              "period_type": "year_label"
+            },
+            "classification": {
+              "pillar": "unknown",
+              "topic_candidates": []
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "metric_record_id": "record_da7397298d2e9cad662d626d824941dc754db2426c0cd7f8115e8511dc13cbef",
+              "row_label_raw": "Doanh thu thuần",
+              "column_headers_raw": [
+                "2024"
+              ],
+              "raw_value": "90",
+              "parsed_value": "90",
+              "unit": "VND",
+              "currency": "VND",
+              "scale": "1",
+              "unit_source_labels_raw": [
+                "Đơn vị tính: VND"
+              ],
+              "normalized_value": "90",
+              "period_role": null,
+              "statement_scope": "separate",
+              "item_code_raw": "10",
+              "row_index": 1,
+              "column_index": 3,
+              "table_anchor_id": "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "number_format": "auto",
+              "logical_table_id": "logical_table_f238dfd4fe6a327f1324a01bd2425f66b1ae027d00adfde87afd855539e1f902",
+              "statement_type": "note_table",
+              "table_title_raw": null,
+              "note_number": null,
+              "note_heading_raw": null,
+              "time_type": "year_label",
+              "restatement_status": "not_labelled",
+              "read_status": "available",
+              "verification_status": "needs_review"
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "available",
+                "reason": "Column/row label + PDF period evidence only; supplied year not used."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/item_code_raw": {
+                "status": "available",
+                "reason": "Observed row cell under explicit code header; physical header alignment used when grid is misindexed. Raw OCR not repaired."
+              },
+              "/payload/statement_scope": {
+                "status": "available",
+                "reason": "Explicit financial statement label; not KPI legal-entity boundary.",
+                "basis": "page_statement"
+              },
+              "/payload/period_role": {
+                "status": "unknown",
+                "reason": "Source-specific semantic mapping."
+              },
+              "/payload/unit": {
+                "status": "available",
+                "reason": "Source-specific semantic mapping."
+              },
+              "/payload/scale": {
+                "status": "available",
+                "reason": "Source-specific semantic mapping."
+              },
+              "/payload/statement_type": {
+                "status": "available",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/table_title_raw": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/note_number": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              },
+              "/payload/note_heading_raw": {
+                "status": "unknown",
+                "reason": "Observed table or note heading; missing is not inferred."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/payload/note_heading_raw",
+              "/payload/note_number",
+              "/payload/period_role",
+              "/payload/table_title_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/payload/raw_value": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/7",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 3,
+                  "bbox": null,
+                  "raw_text": "90"
+                }
+              ],
+              "/content_period": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 3,
+                  "bbox": null,
+                  "raw_text": "2024"
+                }
+              ],
+              "/payload/unit": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/item_code_raw": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "10"
+                },
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "Mã số"
+                }
+              ],
+              "/payload/statement_scope": [
+                {
+                  "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                  "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          }
+        ],
+        "links": [
+          {
+            "link_id": "link_d77dadc9aa2121454395ac68d80c778f4e90e431cb7561434d0144632bf24e16",
+            "from_id": "record_da7397298d2e9cad662d626d824941dc754db2426c0cd7f8115e8511dc13cbef",
+            "to_id": "record_35511883e03b323b9b82edc6a833acf110d389efaff3c7bf64976f10764a957f",
+            "relation_type": "metric_measurement",
+            "status": "candidate"
+          },
+          {
+            "link_id": "link_681aae6c6571c0bc41560b9502af3813147e98267cf4aa284cea7dde575c54a7",
+            "from_id": "record_da7397298d2e9cad662d626d824941dc754db2426c0cd7f8115e8511dc13cbef",
+            "to_id": "record_fa90793af3b4f1209aee58d9fad6b29b2b08f25096c46d1754675e10c1db38a0",
+            "relation_type": "metric_measurement",
+            "status": "candidate"
+          }
+        ],
+        "table_continuations": [],
+        "notes_coverage": [
+          {
+            "block_id": "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df",
+            "pdf_page": 1,
+            "disposition": "outside_notes_or_context_unknown",
+            "record_id": null
+          },
+          {
+            "block_id": "anchor_23232ffdf65fa3e4795eff7df18d4a93115414d9da49fda41ad9b94e7cc56919",
+            "pdf_page": 1,
+            "disposition": "unit_label_retained_in_source",
+            "record_id": null
+          }
+        ],
+        "issues": [
+          {
+            "issue_id": "issue_bb3c34c4d798b6d73dd7a8f5980896806c1ff519a1719f485cb9f5aef0db2f8c",
+            "record_id": "record_35511883e03b323b9b82edc6a833acf110d389efaff3c7bf64976f10764a957f",
+            "field": "/payload/period_role",
+            "code": "PERIOD_ROLE_UNKNOWN",
+            "pdf_page": 1,
+            "status": "open",
+            "details": "Not unambiguously established from source context.",
+            "severity": "warning",
+            "source_refs": [
+              "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df"
+            ],
+            "affected_field": "/payload/period_role",
+            "reason": "Not unambiguously established from source context."
+          },
+          {
+            "issue_id": "issue_7b3fafbb1d22eb453ff3a51f08dd89b8fd8a73fc95d47063e334d000f744bb50",
+            "record_id": "record_fa90793af3b4f1209aee58d9fad6b29b2b08f25096c46d1754675e10c1db38a0",
+            "field": "/payload/period_role",
+            "code": "PERIOD_ROLE_UNKNOWN",
+            "pdf_page": 1,
+            "status": "open",
+            "details": "Not unambiguously established from source context.",
+            "severity": "warning",
+            "source_refs": [
+              "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df"
+            ],
+            "affected_field": "/payload/period_role",
+            "reason": "Not unambiguously established from source context."
+          },
+          {
+            "issue_id": "issue_321e659fd0509c7f97754862f2140c367887c543eba993b7a7fae54559682b7e",
+            "record_id": null,
+            "field": "/metadata/company_name",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/company_name",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_507889eec51cecfbd15ed0f8d99efdf4f68b31c38e32574c6418e43007a2ae91",
+            "record_id": null,
+            "field": "/metadata/ticker_from_pdf",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/ticker_from_pdf",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_9a4c227d262b215a6f7d00083fcbbeced6bec8ad936d20e59a964f1c27ef1128",
+            "record_id": null,
+            "field": "/metadata/period_end",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/period_end",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_5a3e17f4b76b327d73175c26dbb1ebbd36a87627e3ff9c0f07f806538450eee5",
+            "record_id": null,
+            "field": "/metadata/period_start",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/period_start",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_f07a7d39bc62f2e6617ca2333a410b6f7130e9168dfa111cf38cd483735e02ba",
+            "record_id": null,
+            "field": "/metadata/reporting_year",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/reporting_year",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_f04eaaaa5c3f127a6cf0e91dea334bedd4f56f5c29ff29c72e15657e68635fab",
+            "record_id": null,
+            "field": "/metadata/audit_status",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/audit_status",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_04f3abeee162b3c4400d1701e2b3d571feab54854688057baeb9f4e57c53b847",
+            "record_id": null,
+            "field": "/metadata/auditor_name",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/auditor_name",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_36533aee1ccf6b85cf3c23bb73fbb920e04cea256a8c7509e7d836db5c758d01",
+            "record_id": null,
+            "field": "/metadata/audit_opinion",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/audit_opinion",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_9b40ba4d8b408ba60090c43082fc7e0db1883b2841d9b214e96f30b1d2eddf0b",
+            "record_id": null,
+            "field": "/metadata/emphasis_of_matter",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/emphasis_of_matter",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_f4b2fd3a27e2862137b6b5705298e3a29f98f7a724736e9f3c339e3bf7900f08",
+            "record_id": null,
+            "field": "/metadata/signature_date",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/signature_date",
+            "reason": "not_found_in_checked_scope"
+          },
+          {
+            "issue_id": "issue_21e1fd0d7b4c1b1fdfbf7d5318d0ab2adbcd6f4a7c99986b933b3054885ecdee",
+            "record_id": null,
+            "field": "/metadata/publication_date",
+            "code": "METADATA_UNRESOLVED",
+            "severity": "warning",
+            "status": "open",
+            "pdf_page": null,
+            "source_refs": [],
+            "details": "not_found_in_checked_scope",
+            "affected_field": "/metadata/publication_date",
+            "reason": "not_found_in_checked_scope"
+          }
+        ],
+        "counts": {
+          "metrics": 1,
+          "measurements": 2,
+          "tables_seen": 1,
+          "financial_contexts": 0
+        },
+        "pending": [
+          "narrative_field_interpretation",
+          "unconfirmed_continuations_and_scope",
+          "unmapped_cells_and_ocr_review",
+          "graph_adapter"
+        ],
+        "metadata": {
+          "report_title": {
+            "value": "BÁO CÁO TÀI CHÍNH RIÊNG",
+            "status": "available",
+            "sources": [
+              {
+                "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                "native_json_pointer": "/document/texts/0",
+                "pdf_page": 1,
+                "printed_page": null,
+                "native_provenance": [],
+                "block_id": "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df",
+                "raw_text": "BÁO CÁO TÀI CHÍNH RIÊNG"
+              }
+            ],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "report_type": {
+            "value": "financial_statements",
+            "status": "available",
+            "sources": [
+              {
+                "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                "native_json_pointer": "/document/texts/0",
+                "pdf_page": 1,
+                "printed_page": null,
+                "native_provenance": [],
+                "block_id": "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df",
+                "raw_text": "BÁO CÁO TÀI CHÍNH RIÊNG"
+              }
+            ],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "company_name": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "ticker_from_pdf": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "statement_scope": {
+            "value": "separate",
+            "status": "available",
+            "sources": [
+              {
+                "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                "native_json_pointer": "/document/texts/0",
+                "pdf_page": 1,
+                "printed_page": null,
+                "native_provenance": []
+              }
+            ],
+            "method": "explicit_statement_labels_not_filename",
+            "verification_status": "needs_review"
+          },
+          "period_end": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "period_start": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_date_or_calendar_policy_plus_source_year",
+            "verification_status": "needs_review"
+          },
+          "reporting_year": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "presentation_currency": {
+            "value": "VND",
+            "status": "available",
+            "sources": [
+              {
+                "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                "native_json_pointer": "/document/texts/1",
+                "pdf_page": 1,
+                "printed_page": null,
+                "native_provenance": [],
+                "block_id": "anchor_23232ffdf65fa3e4795eff7df18d4a93115414d9da49fda41ad9b94e7cc56919",
+                "raw_text": "Đơn vị tính: VND"
+              }
+            ],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "presentation_unit_raw": {
+            "value": "Đơn vị tính: VND",
+            "status": "available",
+            "sources": [
+              {
+                "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                "native_json_pointer": "/document/texts/1",
+                "pdf_page": 1,
+                "printed_page": null,
+                "native_provenance": [],
+                "block_id": "anchor_23232ffdf65fa3e4795eff7df18d4a93115414d9da49fda41ad9b94e7cc56919",
+                "raw_text": "Đơn vị tính: VND"
+              }
+            ],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "audit_status": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "auditor_name": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "audit_opinion": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_opinion_phrase_candidate_not_independent_audit",
+            "verification_status": "needs_review"
+          },
+          "emphasis_of_matter": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "signature_date": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "publication_date": {
+            "value": null,
+            "status": "not_found_in_checked_scope",
+            "sources": [],
+            "method": "explicit_source",
+            "verification_status": "needs_review"
+          },
+          "supplied_metadata": {
+            "company_id": {
+              "value": "SYNTH",
+              "origin": "user_supplied_or_unknown",
+              "status": "unverified_input_not_pdf_evidence"
+            },
+            "reporting_year": {
+              "value": 2025,
+              "origin": "user_supplied_or_unknown",
+              "status": "unverified_input_not_pdf_evidence"
+            },
+            "report_type": {
+              "value": "financial_statements",
+              "origin": "user_supplied_or_unknown",
+              "status": "unverified_input_not_pdf_evidence"
+            }
+          },
+          "source_pdf": {
+            "filename": "SYNTHETIC_financial_statements_2025.pdf",
+            "sha256": "fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+            "page_count": 1,
+            "path": "source.pdf",
+            "artifact_id": "artifact_b1207571d2bd648764f792f42ce63795e5f1af53f3708c063bc6241c66443cc0"
+          },
+          "observed_measurement_periods": [
+            {
+              "period": {
+                "year": 2025,
+                "as_of_date": null,
+                "start_date": null,
+                "end_date": null,
+                "period_type": "year_label"
+              },
+              "record_ids": [
+                "record_35511883e03b323b9b82edc6a833acf110d389efaff3c7bf64976f10764a957f"
+              ]
+            },
+            {
+              "period": {
+                "year": 2024,
+                "as_of_date": null,
+                "start_date": null,
+                "end_date": null,
+                "period_type": "year_label"
+              },
+              "record_ids": [
+                "record_fa90793af3b4f1209aee58d9fad6b29b2b08f25096c46d1754675e10c1db38a0"
+              ]
+            }
+          ]
+        },
+        "arithmetic_checks": [],
+        "hierarchy_relationships": [],
+        "semantic_coverage": {
+          "pages": [
+            {
+              "pdf_page": 1,
+              "status": "processed",
+              "attempts": 1,
+              "capture_status": "processed",
+              "semantic_status": "partial",
+              "table_ids": [
+                "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030"
+              ],
+              "note_record_count": 0
+            }
+          ],
+          "tables": [
+            {
+              "block_id": "anchor_b918fd5f14294f999b61e2044245dd09ea90cbdab4e3d34b92cd63d206126030",
+              "pdf_page": 1,
+              "statement_type": "note_table",
+              "capture_status": "retained_in_source",
+              "semantic_status": "partial",
+              "record_ids": [
+                "record_da7397298d2e9cad662d626d824941dc754db2426c0cd7f8115e8511dc13cbef",
+                "record_35511883e03b323b9b82edc6a833acf110d389efaff3c7bf64976f10764a957f",
+                "record_fa90793af3b4f1209aee58d9fad6b29b2b08f25096c46d1754675e10c1db38a0"
+              ],
+              "measurement_count": 2,
+              "mapped_measurement_count": 2,
+              "unmapped_numeric_cells": [],
+              "review_status": "needs_review",
+              "source": {
+                "artifact_id": "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574",
+                "artifact_sha256": "8fdac2e9db8c3e1d5b218e0e5f2e55d5d8e8d6c2434a7d9005b3432bc6734c92",
+                "native_json_pointer": "/document/tables/0",
+                "pdf_page": 1,
+                "printed_page": null,
+                "native_provenance": []
+              }
+            }
+          ],
+          "notes": [
+            {
+              "block_id": "anchor_cf660eec6e6aaffa6a117795a4c0e5b4a2fa125b01d56fbb6a7cc1de69e182df",
+              "pdf_page": 1,
+              "disposition": "outside_notes_or_context_unknown",
+              "record_id": null
+            },
+            {
+              "block_id": "anchor_23232ffdf65fa3e4795eff7df18d4a93115414d9da49fda41ad9b94e7cc56919",
+              "pdf_page": 1,
+              "disposition": "unit_label_retained_in_source",
+              "record_id": null
+            }
+          ],
+          "status": "partial",
+          "definition": "Mapped means label + value + period + unit candidates; not verified extraction or full table coverage.",
+          "measurement_mapping_counts": {
+            "total": 2,
+            "mapped": 2
+          }
+        },
+        "esg_relevant_disclosures": [
+          {
+            "category": "environment",
+            "status": "not_found_in_checked_scope",
+            "record_ids": [],
+            "capture_pages_checked": [
+              1
+            ],
+            "search_method": "keyword_scan_over_extracted_records",
+            "limitations": "Not a claim of company absence; OCR gaps/unmapped source and semantic interpretation remain. Ordinary assets/costs are not classified as environmental."
+          },
+          {
+            "category": "restoration_decommissioning",
+            "status": "not_found_in_checked_scope",
+            "record_ids": [],
+            "capture_pages_checked": [
+              1
+            ],
+            "search_method": "keyword_scan_over_extracted_records",
+            "limitations": "Not a claim of company absence; OCR gaps/unmapped source and semantic interpretation remain. Ordinary assets/costs are not classified as environmental."
+          },
+          {
+            "category": "personnel",
+            "status": "not_found_in_checked_scope",
+            "record_ids": [],
+            "capture_pages_checked": [
+              1
+            ],
+            "search_method": "keyword_scan_over_extracted_records",
+            "limitations": "Not a claim of company absence; OCR gaps/unmapped source and semantic interpretation remain. Ordinary assets/costs are not classified as environmental."
+          },
+          {
+            "category": "commitments",
+            "status": "not_found_in_checked_scope",
+            "record_ids": [],
+            "capture_pages_checked": [
+              1
+            ],
+            "search_method": "keyword_scan_over_extracted_records",
+            "limitations": "Not a claim of company absence; OCR gaps/unmapped source and semantic interpretation remain. Ordinary assets/costs are not classified as environmental."
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "scope": "structure_and_references_not_factual_accuracy"
+        }
+      },
+      "native_artifacts": {
+        "artifact_7c697675daed6986e144be37b06db49c5430f2fc7f2a5ad3f1a7a0149f679574": {
+          "status": "processed",
+          "document": {
+            "texts": [
+              {
+                "text": "BÁO CÁO TÀI CHÍNH RIÊNG",
+                "label": "text"
+              },
+              {
+                "text": "Đơn vị tính: VND",
+                "label": "text"
+              }
+            ],
+            "tables": [
+              {
+                "data": {
+                  "num_rows": 2,
+                  "num_cols": 4,
+                  "table_cells": [
+                    {
+                      "text": "Chỉ tiêu",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 0,
+                      "end_col_offset_idx": 1
+                    },
+                    {
+                      "text": "Mã số",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 1,
+                      "end_col_offset_idx": 2
+                    },
+                    {
+                      "text": "2025",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 2,
+                      "end_col_offset_idx": 3
+                    },
+                    {
+                      "text": "2024",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 3,
+                      "end_col_offset_idx": 4
+                    },
+                    {
+                      "text": "Doanh thu thuần",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 0,
+                      "end_col_offset_idx": 1
+                    },
+                    {
+                      "text": "10",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 1,
+                      "end_col_offset_idx": 2
+                    },
+                    {
+                      "text": "100",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 2,
+                      "end_col_offset_idx": 3
+                    },
+                    {
+                      "text": "90",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 3,
+                      "end_col_offset_idx": 4
+                    }
+                  ]
+                }
+              }
+            ],
+            "body": {
+              "children": [
+                {
+                  "$ref": "#/texts/0"
+                },
+                {
+                  "$ref": "#/texts/1"
+                },
+                {
+                  "$ref": "#/tables/0"
+                }
+              ]
+            }
+          },
+          "markdown": "CONTROLLED FAKE PAGE READER - NOT OCR",
+          "report_version_id": "report_fe772064cb167fc5676aa1668baaf89d430c395be6255493ce7484d15f0faf12",
+          "profile_id": "profile_6e9aef9ed8a13e6d102d092b11ce5883366c6eb02ef1c4f3766ab1e179aad543",
+          "pdf_page": 1,
+          "attempts": 1,
+          "attempt_history": [
+            {
+              "attempt_id": "attempt_bb607ebd39c35f3b078d3aa8db4942e06baa708bb056558e8d16278bef8990c2",
+              "at": "2026-10-22T15:46:56.725248+00:00",
+              "status": "processed",
+              "error": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "document_index": 1,
+      "filename": "SYNTHETIC_ESG_2025.pdf",
+      "capture_status": "completed",
+      "coverage": {
+        "total_pages": 1,
+        "counts": {
+          "processed": 1
+        },
+        "pages": [
+          {
+            "pdf_page": 1,
+            "status": "processed",
+            "attempts": 1
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "esg-candidates/2.1.0",
+        "parser_version": 3,
+        "created_at": "2026-10-22T15:46:56.899426+00:00",
+        "config": {
+          "version": "esg-keyword-candidates/2",
+          "sha256": "3a8817f73524cd67288184bfa52a4a84cb8d5c4cf679d483f2c3d79126c707cd",
+          "taxonomy_status": "provisional_candidates_not_graph_agreed"
+        },
+        "source_capture_sha256": "c45df9bd348097acbc6615653bbbd3ad46d94fdbd831682bd08bea30862d4cb3",
+        "reports": [
+          {
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "source_filename": "SYNTHETIC_ESG_2025.pdf",
+            "source_sha256": "609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "source_access": "source.pdf",
+            "company_id": "SYNTH",
+            "report_type": "ESG",
+            "reporting_year": 2025,
+            "metadata_origin": "user_supplied_or_unknown",
+            "report_scope": null,
+            "publication_date": null,
+            "pdf_page_count": 1
+          }
+        ],
+        "source_artifacts": [
+          {
+            "artifact_id": "artifact_10dd0a8d50159b64af32ae46045d1ea9352b3413fcf0e944665dead7fb64c64b",
+            "path": "source.pdf",
+            "sha256": "609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "kind": "pdf"
+          },
+          {
+            "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+            "path": "pages/0001.json",
+            "sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+            "kind": "page_checkpoint"
+          }
+        ],
+        "source_blocks": [
+          {
+            "block_id": "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "kind": "texts",
+            "label": "text",
+            "original_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+            "original_cells": null,
+            "source": {
+              "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+              "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+              "native_json_pointer": "/document/texts/0",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          },
+          {
+            "block_id": "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "kind": "texts",
+            "label": "text",
+            "original_text": "Phạm vi chỉ tiêu chưa xác minh.",
+            "original_cells": null,
+            "source": {
+              "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+              "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+              "native_json_pointer": "/document/texts/1",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          },
+          {
+            "block_id": "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "kind": "tables",
+            "label": null,
+            "original_text": null,
+            "original_cells": [
+              {
+                "text": "Chỉ tiêu",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "Đơn vị",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "2025",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "Tổng số lao động",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "người",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              }
+            ],
+            "source": {
+              "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+              "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+              "native_json_pointer": "/document/tables/0",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          }
+        ],
+        "metrics_config_sha256": "271dcbf256ffe325738c152f2b41192174c98fda9fe7a4305eb471135af7b2a1",
+        "number_format": "auto",
+        "records": [
+          {
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "record_type": "claim",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+            "original_cells": [],
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "E",
+              "topic_candidates": [
+                {
+                  "topic_id": "E_CLIMATE",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+                  ]
+                },
+                {
+                  "topic_id": "E_ENERGY",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "actor": null,
+              "action": null,
+              "object": null,
+              "qualifier": null,
+              "statement": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+              "section_heading_raw": null,
+              "classification_method": "esg-keyword-candidates/2",
+              "assertion_status": "unverified",
+              "negation_cue": false
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Reporting year not used as content period."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/section_heading_raw": {
+                "status": "unknown",
+                "reason": "Only observed source headings may be inherited."
+              },
+              "/payload/actor": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/action": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/object": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/qualifier": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/action",
+              "/payload/actor",
+              "/payload/object",
+              "/payload/qualifier",
+              "/payload/section_heading_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "type_candidates": [
+              {
+                "record_type": "claim",
+                "status": "candidate"
+              },
+              {
+                "record_type": "policy",
+                "status": "candidate"
+              }
+            ],
+            "field_sources": {
+              "/payload/statement": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/section_heading_raw": [],
+              "/record_type": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "record_type": "policy",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+            "original_cells": [],
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "E",
+              "topic_candidates": [
+                {
+                  "topic_id": "E_CLIMATE",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+                  ]
+                },
+                {
+                  "topic_id": "E_ENERGY",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "policy_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+              "applicable_scope": null,
+              "effective_date": null,
+              "statement": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+              "section_heading_raw": null,
+              "classification_method": "esg-keyword-candidates/2",
+              "assertion_status": "unverified",
+              "negation_cue": false
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Reporting year not used as content period."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/section_heading_raw": {
+                "status": "unknown",
+                "reason": "Only observed source headings may be inherited."
+              },
+              "/payload/policy_text": {
+                "status": "available",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/applicable_scope": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/effective_date": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/applicable_scope",
+              "/payload/effective_date",
+              "/payload/section_heading_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "type_candidates": [
+              {
+                "record_type": "claim",
+                "status": "candidate"
+              },
+              {
+                "record_type": "policy",
+                "status": "candidate"
+              }
+            ],
+            "field_sources": {
+              "/payload/statement": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/section_heading_raw": [],
+              "/record_type": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/policy_text": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "record_type": "unknown",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Phạm vi chỉ tiêu chưa xác minh.",
+            "original_cells": [],
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "unknown",
+              "topic_candidates": [],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "reason": "No configured ESG type or topic signal; source retained for review.",
+              "statement": "Phạm vi chỉ tiêu chưa xác minh.",
+              "section_heading_raw": null,
+              "classification_method": "esg-keyword-candidates/2",
+              "assertion_status": "unverified",
+              "negation_cue": true
+            },
+            "data_status": "unknown",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Reporting year not used as content period."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/section_heading_raw": {
+                "status": "unknown",
+                "reason": "Only observed source headings may be inherited."
+              },
+              "/payload/reason": {
+                "status": "available",
+                "reason": "Explicit source phrase only; no inferred values."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/section_heading_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "type_candidates": [
+              {
+                "record_type": "unknown",
+                "status": "candidate"
+              }
+            ],
+            "field_sources": {
+              "/payload/statement": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/section_heading_raw": [],
+              "/record_type": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/reason": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_fb8da6f5b92b7e8828f1b7cc64f1a61441adc4bbff18c7a76e87bf98dafaa12a",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "record_type": "metric",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Tổng số lao động",
+            "original_cells": [
+              {
+                "text": "Tổng số lao động",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              }
+            ],
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "S",
+              "topic_candidates": [
+                {
+                  "topic_id": "S_WORKFORCE",
+                  "pillar": "S",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "statement": "Tổng số lao động",
+              "section_heading_raw": null,
+              "classification_method": "explicit_table_cells",
+              "assertion_status": "unverified",
+              "name_raw": "Tổng số lao động",
+              "metric_code_candidates": []
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/name_raw": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/original_text": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ],
+              "/classification": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ],
+              "/payload/name_raw": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e",
+            "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+            "record_type": "measurement",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "100",
+            "original_cells": [
+              {
+                "text": "Tổng số lao động",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "2025",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "người",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              }
+            ],
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "interpretation_notes": [
+              "Value and period candidates do not verify KPI legal-entity boundary. No cross-page header inheritance."
+            ],
+            "content_period": {
+              "raw_text": "2025",
+              "year": 2025,
+              "as_of_date": null,
+              "start_date": null,
+              "end_date": null,
+              "period_type": "year_label"
+            },
+            "classification": {
+              "pillar": "S",
+              "topic_candidates": [
+                {
+                  "topic_id": "S_WORKFORCE",
+                  "pillar": "S",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "statement": "100",
+              "section_heading_raw": null,
+              "classification_method": "explicit_table_cells",
+              "assertion_status": "unverified",
+              "metric_id": "record_fb8da6f5b92b7e8828f1b7cc64f1a61441adc4bbff18c7a76e87bf98dafaa12a",
+              "metric_code_candidates": [],
+              "value": "100",
+              "value_raw": "100",
+              "header_raw": "2025",
+              "unit": "người"
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "available",
+                "reason": "Only explicit unambiguous column period; not report year."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/value": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              },
+              "/payload/value_raw": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              },
+              "/payload/header_raw": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              },
+              "/payload/unit": {
+                "status": "available",
+                "reason": "Conflicting/absent units remain null; no standard-unit default."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/original_text": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/classification": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ],
+              "/payload/value": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/payload/value_raw": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/payload/header_raw": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/2",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "2025"
+                }
+              ],
+              "/content_period": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/2",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "2025"
+                }
+              ],
+              "/payload/unit": [
+                {
+                  "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+                  "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/4",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "người"
+                }
+              ]
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "evidence_0be6bd859a91ae4692e777c5bbbb7c36ed7ce9e1d787be7329a848c8a88dc341",
+            "record_id": "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e",
+            "metric_id": "record_fb8da6f5b92b7e8828f1b7cc64f1a61441adc4bbff18c7a76e87bf98dafaa12a",
+            "original_text": "100",
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "source": {
+              "artifact_id": "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47",
+              "artifact_sha256": "3765a0e2015583327857ca8fd198cca06e585c2dfef2e5859c31e9ee83eb0c25",
+              "native_json_pointer": "/document/tables/0/data/table_cells/5",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": [],
+              "row_index": 1,
+              "column_index": 2,
+              "bbox": null,
+              "raw_text": "100"
+            },
+            "status": "candidate",
+            "boundary_verified": false
+          }
+        ],
+        "links": [],
+        "issues": [
+          {
+            "issue_id": "issue_891c6f389191a95c3e380b93c692b65c66a185f17664d741d6338e5e6c762906",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/boundary/consolidation_method",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_aa91434444abc7939c30a10e080dbc5f09b87090d161709d0a472f40ba11df12",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/boundary/excluded_entities",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_bc8728f0b52a904c1da84182f31e514e75d40c883e8f09526e84e41db5fe1415",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/boundary/included_entities",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_7780784b1012b9b33e08ca93191a9616e968dcc9417816d85d95aec634e5b2f4",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/content_period",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Reporting year not used as content period."
+          },
+          {
+            "issue_id": "issue_94e6de8e81889fc84172f16dd68d428e9a08fcd2bafd8a9e74ff165bee2c4042",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/payload/action",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_e7f3939b5e4a965f9c85a18109ee6ce32c06609467fcfeaacfcf0675071c1d14",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/payload/actor",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_ce12bb0eade4355b995f092f436a5d7d529a37a4f454e8cb74b9f02136b0d966",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/payload/object",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_5f09a46b66266f9197345d12e790c33ee79f310a8f4eb7274155f19b5369f453",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/payload/qualifier",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_561d8e4a1436f30f65fe8695de1a6fb070aa0ab387746bc982cf5b30b0dd47ad",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/payload/section_heading_raw",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Only observed source headings may be inherited."
+          },
+          {
+            "issue_id": "issue_02e0ce414c7b44202f14635ea80528fc9ee496aa29a4a87e18c3b36c3da7555d",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/reported_entity",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_74f4522572e35e67c2cba4581a72668562a5ae4c139712faa920a3ea8ddf33c3",
+            "record_id": "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+            "field": "/record_type",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_CANDIDATE_REVIEW",
+            "status": "open",
+            "details": "Keyword/context candidate. Negation, role, completeness and factual meaning require review."
+          },
+          {
+            "issue_id": "issue_e0e37d371dd82752b3e902772d4e07c519eb0934e918cb7732110aa89e7eb205",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/boundary/consolidation_method",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_9321067840e1740f77fe8ce347ca359f056d55e2e248469aa914350d30629c80",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/boundary/excluded_entities",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_62824bab275c123a976dc87f82ddb38dfc6f5a9d0c01915e2d27ac6fd08990f7",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/boundary/included_entities",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_6ae83322445b9b118784a89bcb415686e7b2e7d8bc5d8efb65486655d4fef681",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/content_period",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Reporting year not used as content period."
+          },
+          {
+            "issue_id": "issue_bb1226cf770ef5f53927d36c0558ff6f63810a53c7056e463f7a7bba05cc914e",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/payload/applicable_scope",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_f475a0952191be1d40f5560f4024e4e19632e6ab8abec15ddbbd82db8de60ee1",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/payload/effective_date",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_e012541e1ea9c1cff0cc958ed36d3e83c7d389514b0663157b60cffd68a2974c",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/payload/section_heading_raw",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Only observed source headings may be inherited."
+          },
+          {
+            "issue_id": "issue_d755d7915e839b6102e32aa6957e423de1c164aef3c6560dd2ca9620f5306dd2",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/reported_entity",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_5795d1db6d5dc3e5230a321c5aa8f184d8119ce67ac5ff032db71c1440b4518b",
+            "record_id": "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902",
+            "field": "/record_type",
+            "source_refs": [
+              "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_CANDIDATE_REVIEW",
+            "status": "open",
+            "details": "Keyword/context candidate. Negation, role, completeness and factual meaning require review."
+          },
+          {
+            "issue_id": "issue_d51a38c8ef3c0bd9f07e81ee2d4c302d14b4cb61303792799bb42c4653cab813",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/boundary/consolidation_method",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_6869a0cf837446b7279492e3d6fb5c38812aee92d38e17eab08d75bea4d34747",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/boundary/excluded_entities",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_bd4c7f76189606243a7ead4097025eb2d2581fd5a290cf43a69c0295945d2f57",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/boundary/included_entities",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_27605a15a14816f7f96a2a88b8b22ce073ad048b90b924ae52f76ff083fe8bc1",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/content_period",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Reporting year not used as content period."
+          },
+          {
+            "issue_id": "issue_e0db951bcef10a761f27f9c31ae29679ee06d35f0d168dd31f85f69dbcb8ecf1",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/payload/section_heading_raw",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Only observed source headings may be inherited."
+          },
+          {
+            "issue_id": "issue_8474ad85660afea14807079284f44578a12aec56b71f2ab347f77202e4da358b",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/reported_entity",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_1bbaf84a3f2026a41c1eaa10f43e9aaa410eed6dff33a63059000351ae923302",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/record_type",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_CANDIDATE_REVIEW",
+            "status": "open",
+            "details": "Keyword/context candidate. Negation, role, completeness and factual meaning require review."
+          },
+          {
+            "issue_id": "issue_6c45df9d57c00566e9706c22af5ac2b2b1d2556b55aa6f8bd8259dfec3cdd4de",
+            "record_id": "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6",
+            "field": "/payload/negation_cue",
+            "source_refs": [
+              "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_NEGATION_REVIEW",
+            "status": "open",
+            "details": "Negation word detected; candidate type is not confirmation of a positive assertion."
+          },
+          {
+            "issue_id": "issue_3a805abb204c9699a9b4b0029b79183d04ae74d557140612a29869c8ad60b0a5",
+            "record_id": null,
+            "field": "/coverage",
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_BLOCK_PENDING",
+            "status": "open",
+            "details": "Source retained; unparsed cells/charts and table completeness require review."
+          },
+          {
+            "issue_id": "issue_6aac01579ce3e6a2f868397a43ccb93874d8401ff9521aa48b993228c6a8e802",
+            "record_id": "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e",
+            "field": "/boundary/consolidation_method",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_5b59cfe803b3c7d20eed23036a8f76b2074167c792b178f7df60b869bc8b6f61",
+            "record_id": "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e",
+            "field": "/boundary/excluded_entities",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_351a973b98ad04fa505e07b8fa7267ee93a86147644509b93986d3186befdf7c",
+            "record_id": "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e",
+            "field": "/boundary/included_entities",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_32e434384f7bf95e4d7e1e5ae1597efe96dc6d2f5b9af3dfa1a940a0fbd8d353",
+            "record_id": "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e",
+            "field": "/reported_entity",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          }
+        ],
+        "coverage": {
+          "source_pages": {
+            "total_pages": 1,
+            "counts": {
+              "processed": 1
+            },
+            "pages": [
+              {
+                "pdf_page": 1,
+                "status": "processed",
+                "attempts": 1
+              }
+            ]
+          },
+          "blocks": [
+            {
+              "block_id": "anchor_0bc0dc7660e99c0ab9ddc4412be4e825bea79823fd6b992d972236a716dec2e6",
+              "pdf_page": 1,
+              "record_ids": [
+                "record_d02f4d0d5f9395c605f6c72e773fbe9224c3d025b210c9375761a909e36f80f0",
+                "record_04a2cc3054daa8d093877a80963fe2018c54f20e8ae2b645d88f4d6ced186902"
+              ],
+              "disposition": "text_candidates"
+            },
+            {
+              "block_id": "anchor_5b6ead8b0a8d98cecc0ac250dd60e56283f9d6e7ed8003e5e61cf6d4b5068e60",
+              "pdf_page": 1,
+              "record_ids": [
+                "record_6823db99908e28288bc53634ad31423836570438ff45ec44ed4034b34b3feff6"
+              ],
+              "disposition": "text_candidates"
+            },
+            {
+              "block_id": "anchor_da66bdc6e5541c07f56e68cff43fac5a182afc810b9189c45c471074c22ed32e",
+              "pdf_page": 1,
+              "record_ids": [
+                "record_fb8da6f5b92b7e8828f1b7cc64f1a61441adc4bbff18c7a76e87bf98dafaa12a",
+                "record_aae5a3b7f5437c926b3511b6330f473ac4c813872b4995be6fc0993be07ca63e"
+              ],
+              "disposition": "table_candidates_needs_completeness_review"
+            }
+          ]
+        },
+        "counts": {
+          "claim": 1,
+          "policy": 1,
+          "unknown": 1,
+          "metric": 1,
+          "measurement": 1
+        },
+        "graph_ready": false,
+        "semantic_status": "partial",
+        "pending": [
+          "table_completeness_review",
+          "cross_page_esg_tables",
+          "chart_extraction",
+          "semantic_field_interpretation",
+          "evidence_link_review",
+          "graph_adapter",
+          "review_ui"
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "scope": "structure_and_source_not_factual_accuracy"
+        }
+      },
+      "native_artifacts": {
+        "artifact_a6ab7cebf9dbb66ada2ae234a2ce27131c1b2abc64a32154942f545b01454d47": {
+          "status": "processed",
+          "document": {
+            "texts": [
+              {
+                "text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+                "label": "text"
+              },
+              {
+                "text": "Phạm vi chỉ tiêu chưa xác minh.",
+                "label": "text"
+              }
+            ],
+            "tables": [
+              {
+                "data": {
+                  "num_rows": 2,
+                  "num_cols": 3,
+                  "table_cells": [
+                    {
+                      "text": "Chỉ tiêu",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 0,
+                      "end_col_offset_idx": 1
+                    },
+                    {
+                      "text": "Đơn vị",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 1,
+                      "end_col_offset_idx": 2
+                    },
+                    {
+                      "text": "2025",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 2,
+                      "end_col_offset_idx": 3
+                    },
+                    {
+                      "text": "Tổng số lao động",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 0,
+                      "end_col_offset_idx": 1
+                    },
+                    {
+                      "text": "người",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 1,
+                      "end_col_offset_idx": 2
+                    },
+                    {
+                      "text": "100",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 2,
+                      "end_col_offset_idx": 3
+                    }
+                  ]
+                }
+              }
+            ],
+            "body": {
+              "children": [
+                {
+                  "$ref": "#/texts/0"
+                },
+                {
+                  "$ref": "#/texts/1"
+                },
+                {
+                  "$ref": "#/tables/0"
+                }
+              ]
+            }
+          },
+          "markdown": "CONTROLLED FAKE PAGE READER - NOT OCR",
+          "report_version_id": "report_609c90c469a89b5c04c8104938d7b7076b0602264893ef16d36089b483e62cac",
+          "profile_id": "profile_6e9aef9ed8a13e6d102d092b11ce5883366c6eb02ef1c4f3766ab1e179aad543",
+          "pdf_page": 1,
+          "attempts": 1,
+          "attempt_history": [
+            {
+              "attempt_id": "attempt_ab20b1da35dab364596820029e93101ddfed76eccd2b9c97a928728c90b1edb7",
+              "at": "2026-10-22T15:46:56.829943+00:00",
+              "status": "processed",
+              "error": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "document_index": 2,
+      "filename": "SYNTHETIC_annual_report_2025.pdf",
+      "capture_status": "completed",
+      "coverage": {
+        "total_pages": 1,
+        "counts": {
+          "processed": 1
+        },
+        "pages": [
+          {
+            "pdf_page": 1,
+            "status": "processed",
+            "attempts": 1
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "esg-candidates/2.1.0",
+        "parser_version": 3,
+        "created_at": "2026-10-22T15:46:57.016383+00:00",
+        "config": {
+          "version": "esg-keyword-candidates/2",
+          "sha256": "3a8817f73524cd67288184bfa52a4a84cb8d5c4cf679d483f2c3d79126c707cd",
+          "taxonomy_status": "provisional_candidates_not_graph_agreed"
+        },
+        "source_capture_sha256": "b44f851fee36d3c3b63516b39be121ab9fe174e11818567a49d323065c5e621d",
+        "reports": [
+          {
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "source_filename": "SYNTHETIC_annual_report_2025.pdf",
+            "source_sha256": "d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "source_access": "source.pdf",
+            "company_id": "SYNTH",
+            "report_type": "annual_report",
+            "reporting_year": 2025,
+            "metadata_origin": "user_supplied_or_unknown",
+            "report_scope": null,
+            "publication_date": null,
+            "pdf_page_count": 1
+          }
+        ],
+        "source_artifacts": [
+          {
+            "artifact_id": "artifact_150a24d18dbfd36af266855a18f9bbce59e215f1ddc4eaf9c779d1692ab49318",
+            "path": "source.pdf",
+            "sha256": "d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "kind": "pdf"
+          },
+          {
+            "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+            "path": "pages/0001.json",
+            "sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+            "kind": "page_checkpoint"
+          }
+        ],
+        "source_blocks": [
+          {
+            "block_id": "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "kind": "texts",
+            "label": "text",
+            "original_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+            "original_cells": null,
+            "source": {
+              "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+              "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+              "native_json_pointer": "/document/texts/0",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          },
+          {
+            "block_id": "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "kind": "texts",
+            "label": "text",
+            "original_text": "Phạm vi chỉ tiêu chưa xác minh.",
+            "original_cells": null,
+            "source": {
+              "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+              "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+              "native_json_pointer": "/document/texts/1",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          },
+          {
+            "block_id": "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "kind": "tables",
+            "label": null,
+            "original_text": null,
+            "original_cells": [
+              {
+                "text": "Chỉ tiêu",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "Đơn vị",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "2025",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "Tổng số lao động",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "người",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              }
+            ],
+            "source": {
+              "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+              "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+              "native_json_pointer": "/document/tables/0",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": []
+            },
+            "disposition": "pending_semantic_extraction"
+          }
+        ],
+        "metrics_config_sha256": "271dcbf256ffe325738c152f2b41192174c98fda9fe7a4305eb471135af7b2a1",
+        "number_format": "auto",
+        "records": [
+          {
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "record_type": "claim",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+            "original_cells": [],
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "E",
+              "topic_candidates": [
+                {
+                  "topic_id": "E_CLIMATE",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+                  ]
+                },
+                {
+                  "topic_id": "E_ENERGY",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "actor": null,
+              "action": null,
+              "object": null,
+              "qualifier": null,
+              "statement": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+              "section_heading_raw": null,
+              "classification_method": "esg-keyword-candidates/2",
+              "assertion_status": "unverified",
+              "negation_cue": false
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Reporting year not used as content period."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/section_heading_raw": {
+                "status": "unknown",
+                "reason": "Only observed source headings may be inherited."
+              },
+              "/payload/actor": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/action": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/object": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/qualifier": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/action",
+              "/payload/actor",
+              "/payload/object",
+              "/payload/qualifier",
+              "/payload/section_heading_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "type_candidates": [
+              {
+                "record_type": "claim",
+                "status": "candidate"
+              },
+              {
+                "record_type": "policy",
+                "status": "candidate"
+              }
+            ],
+            "field_sources": {
+              "/payload/statement": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/section_heading_raw": [],
+              "/record_type": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "record_type": "policy",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+            "original_cells": [],
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "E",
+              "topic_candidates": [
+                {
+                  "topic_id": "E_CLIMATE",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+                  ]
+                },
+                {
+                  "topic_id": "E_ENERGY",
+                  "pillar": "E",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "policy_text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+              "applicable_scope": null,
+              "effective_date": null,
+              "statement": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+              "section_heading_raw": null,
+              "classification_method": "esg-keyword-candidates/2",
+              "assertion_status": "unverified",
+              "negation_cue": false
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Reporting year not used as content period."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/section_heading_raw": {
+                "status": "unknown",
+                "reason": "Only observed source headings may be inherited."
+              },
+              "/payload/policy_text": {
+                "status": "available",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/applicable_scope": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              },
+              "/payload/effective_date": {
+                "status": "unknown",
+                "reason": "Explicit source phrase only; no inferred values."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/applicable_scope",
+              "/payload/effective_date",
+              "/payload/section_heading_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "type_candidates": [
+              {
+                "record_type": "claim",
+                "status": "candidate"
+              },
+              {
+                "record_type": "policy",
+                "status": "candidate"
+              }
+            ],
+            "field_sources": {
+              "/payload/statement": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/section_heading_raw": [],
+              "/record_type": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/policy_text": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/0",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "record_type": "unknown",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Phạm vi chỉ tiêu chưa xác minh.",
+            "original_cells": [],
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "unknown",
+              "topic_candidates": [],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "reason": "No configured ESG type or topic signal; source retained for review.",
+              "statement": "Phạm vi chỉ tiêu chưa xác minh.",
+              "section_heading_raw": null,
+              "classification_method": "esg-keyword-candidates/2",
+              "assertion_status": "unverified",
+              "negation_cue": true
+            },
+            "data_status": "unknown",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Reporting year not used as content period."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/section_heading_raw": {
+                "status": "unknown",
+                "reason": "Only observed source headings may be inherited."
+              },
+              "/payload/reason": {
+                "status": "available",
+                "reason": "Explicit source phrase only; no inferred values."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/payload/section_heading_raw",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "type_candidates": [
+              {
+                "record_type": "unknown",
+                "status": "candidate"
+              }
+            ],
+            "field_sources": {
+              "/payload/statement": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/section_heading_raw": [],
+              "/record_type": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ],
+              "/payload/reason": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/texts/1",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": []
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_17a1aa4540e3595c87242e74027eb1438f1f32c8245dcaa179265d27532ed055",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "record_type": "metric",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "Tổng số lao động",
+            "original_cells": [
+              {
+                "text": "Tổng số lao động",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              }
+            ],
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "interpretation_notes": [],
+            "content_period": null,
+            "classification": {
+              "pillar": "S",
+              "topic_candidates": [
+                {
+                  "topic_id": "S_WORKFORCE",
+                  "pillar": "S",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "statement": "Tổng số lao động",
+              "section_heading_raw": null,
+              "classification_method": "explicit_table_cells",
+              "assertion_status": "unverified",
+              "name_raw": "Tổng số lao động",
+              "metric_code_candidates": []
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/name_raw": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/content_period",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/original_text": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ],
+              "/classification": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ],
+              "/payload/name_raw": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ]
+            }
+          },
+          {
+            "record_id": "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f",
+            "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+            "record_type": "measurement",
+            "company_id": "SYNTH",
+            "reported_entity": null,
+            "domain": "esg",
+            "original_text": "100",
+            "original_cells": [
+              {
+                "text": "Tổng số lao động",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 0,
+                "end_col_offset_idx": 1
+              },
+              {
+                "text": "2025",
+                "column_header": true,
+                "start_row_offset_idx": 0,
+                "end_row_offset_idx": 1,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              },
+              {
+                "text": "người",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 1,
+                "end_col_offset_idx": 2
+              },
+              {
+                "text": "100",
+                "column_header": false,
+                "start_row_offset_idx": 1,
+                "end_row_offset_idx": 2,
+                "start_col_offset_idx": 2,
+                "end_col_offset_idx": 3
+              }
+            ],
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "interpretation_notes": [
+              "Value and period candidates do not verify KPI legal-entity boundary. No cross-page header inheritance."
+            ],
+            "content_period": {
+              "raw_text": "2025",
+              "year": 2025,
+              "as_of_date": null,
+              "start_date": null,
+              "end_date": null,
+              "period_type": "year_label"
+            },
+            "classification": {
+              "pillar": "S",
+              "topic_candidates": [
+                {
+                  "topic_id": "S_WORKFORCE",
+                  "pillar": "S",
+                  "status": "candidate",
+                  "source_refs": [
+                    "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+                  ]
+                }
+              ],
+              "codebook_version": "esg-keyword-candidates/2",
+              "status": "candidate"
+            },
+            "boundary": {
+              "included_entities": null,
+              "excluded_entities": null,
+              "consolidation_method": null,
+              "missing_fields": [
+                "consolidation_method",
+                "excluded_entities",
+                "included_entities"
+              ]
+            },
+            "payload": {
+              "statement": "100",
+              "section_heading_raw": null,
+              "classification_method": "explicit_table_cells",
+              "assertion_status": "unverified",
+              "metric_id": "record_17a1aa4540e3595c87242e74027eb1438f1f32c8245dcaa179265d27532ed055",
+              "metric_code_candidates": [],
+              "value": "100",
+              "value_raw": "100",
+              "header_raw": "2025",
+              "unit": "người"
+            },
+            "data_status": "available",
+            "field_status": {
+              "/company_id": {
+                "status": "available",
+                "reason": "Not yet extracted from source."
+              },
+              "/reported_entity": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/content_period": {
+                "status": "available",
+                "reason": "Only explicit unambiguous column period; not report year."
+              },
+              "/boundary/included_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/excluded_entities": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/boundary/consolidation_method": {
+                "status": "unknown",
+                "reason": "Not yet extracted from source."
+              },
+              "/payload/value": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              },
+              "/payload/value_raw": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              },
+              "/payload/header_raw": {
+                "status": "available",
+                "reason": "Explicit source cells only; no inferred defaults."
+              },
+              "/payload/unit": {
+                "status": "available",
+                "reason": "Conflicting/absent units remain null; no standard-unit default."
+              }
+            },
+            "missing_fields": [
+              "/boundary/consolidation_method",
+              "/boundary/excluded_entities",
+              "/boundary/included_entities",
+              "/reported_entity"
+            ],
+            "review": {
+              "status": "needs_review",
+              "verified_fields": []
+            },
+            "field_sources": {
+              "/original_text": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/classification": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/3",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 0,
+                  "bbox": null,
+                  "raw_text": "Tổng số lao động"
+                }
+              ],
+              "/payload/value": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/payload/value_raw": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/5",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "100"
+                }
+              ],
+              "/payload/header_raw": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/2",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "2025"
+                }
+              ],
+              "/content_period": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/2",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 0,
+                  "column_index": 2,
+                  "bbox": null,
+                  "raw_text": "2025"
+                }
+              ],
+              "/payload/unit": [
+                {
+                  "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+                  "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+                  "native_json_pointer": "/document/tables/0/data/table_cells/4",
+                  "pdf_page": 1,
+                  "printed_page": null,
+                  "native_provenance": [],
+                  "row_index": 1,
+                  "column_index": 1,
+                  "bbox": null,
+                  "raw_text": "người"
+                }
+              ]
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "evidence_9ef30c099beb250ae15bcef6af3b846cd04de15ef41fc915798f122d02630a23",
+            "record_id": "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f",
+            "metric_id": "record_17a1aa4540e3595c87242e74027eb1438f1f32c8245dcaa179265d27532ed055",
+            "original_text": "100",
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "source": {
+              "artifact_id": "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31",
+              "artifact_sha256": "632562a8a0758e5376f2adfd87f90dec11c42f343b41d95e1188e4caf2ebe176",
+              "native_json_pointer": "/document/tables/0/data/table_cells/5",
+              "pdf_page": 1,
+              "printed_page": null,
+              "native_provenance": [],
+              "row_index": 1,
+              "column_index": 2,
+              "bbox": null,
+              "raw_text": "100"
+            },
+            "status": "candidate",
+            "boundary_verified": false
+          }
+        ],
+        "links": [],
+        "issues": [
+          {
+            "issue_id": "issue_4f11b80897dbefb0f3cde94c4090afafdf65dc40e78ad6ee4355a01b61a9f679",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/boundary/consolidation_method",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_a822f0517670bed3b6bdc59c5f54c73003f361f6c30700157b9ea88a2ebab22f",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/boundary/excluded_entities",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_9fc4ce94b3d098397e50b34f8ef0c02c4824392775f23ff7a211ac1452176db7",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/boundary/included_entities",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_77f079fddb5191095ed35e991ba1d0a19f646e58d26d1a56e578bdaa0a1bd98f",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/content_period",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Reporting year not used as content period."
+          },
+          {
+            "issue_id": "issue_896f19bccb78d9baadfd6a9bf41b1b1e5f9e2beca156b1b22e4e2620a71b3ba1",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/payload/action",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_d6f3a7c13dc1eba6a09c889e8d8b20e1d5e00a49a14c8f38c87b6d97dae87301",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/payload/actor",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_5a4c4c80cd1ed6b28be31cdc50a6dfc9b8551262766aa657e45cfdad176ca66f",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/payload/object",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_71969644e7f4540ba056a023465e3cbe15ff112d02e18154122dc7725c80febf",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/payload/qualifier",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_481d2f6d5d514e8c6cc5666c7d4298af717ba10e14804e257adb9d46e5981171",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/payload/section_heading_raw",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Only observed source headings may be inherited."
+          },
+          {
+            "issue_id": "issue_c26e89ea7cca689af68e8250b0820a7385411fa582666b3005b8e3ef6ab4786a",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/reported_entity",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_a1f43ab09e88d3cb7e301910a0b3229fc5a0dafb397e64c611c31216e142f37a",
+            "record_id": "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+            "field": "/record_type",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_CANDIDATE_REVIEW",
+            "status": "open",
+            "details": "Keyword/context candidate. Negation, role, completeness and factual meaning require review."
+          },
+          {
+            "issue_id": "issue_b1f1eabbfae4d006c11fedef7dd6081fecb0c998a70ec6cb5335139502e44d9b",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/boundary/consolidation_method",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_283f68b42398ccb618543a1d29e6079699ab179c40fec3bedb67ed3c9485906e",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/boundary/excluded_entities",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_deca6c1355dae623e73efcba22e057f929574ac0f6b954cc3123643cca21b2f3",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/boundary/included_entities",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_7bb598744a956ddc58739df3aa08a5c8b47e3be1ca80073c042249122baf7500",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/content_period",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Reporting year not used as content period."
+          },
+          {
+            "issue_id": "issue_76f510f3e3e07030cfdbb320c9d8cce201f6fdbd07605a63c4cbd43e83fb556c",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/payload/applicable_scope",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_4d7045f3d55fdc07020ce83b1a17841b5409af5f9711c7f007ed1b01e71f6065",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/payload/effective_date",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Explicit source phrase only; no inferred values."
+          },
+          {
+            "issue_id": "issue_6b2448b7260b6cb8ad0208429680d58c3623a479d8cd8c03e6280f8a5c5ff9d4",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/payload/section_heading_raw",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Only observed source headings may be inherited."
+          },
+          {
+            "issue_id": "issue_23a45299f1e1e40f9594b4887a9c58a23250eb02a1414a450632412905029ce5",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/reported_entity",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_6fb5b7ae9e5aec0d88bfe28ae6c154e612bd597da85eaf09e497e30ebd5685df",
+            "record_id": "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33",
+            "field": "/record_type",
+            "source_refs": [
+              "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_CANDIDATE_REVIEW",
+            "status": "open",
+            "details": "Keyword/context candidate. Negation, role, completeness and factual meaning require review."
+          },
+          {
+            "issue_id": "issue_38be8129b7398d1de580650c5454aabc3edcbaa1839cf2d604efb3e2cdfc4e4f",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/boundary/consolidation_method",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_3a9b0e79a54a606e8e4f0a262741898bea022275d36a909f674bb4e8f0b7bcba",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/boundary/excluded_entities",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_76deb9de1840094381c69da0591d9064c5585a9acabc58e55625b90d7df72a33",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/boundary/included_entities",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_ad611530bea2fc238aa52ae481875c39010f288908c4789f7aab4eb19383848f",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/content_period",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Reporting year not used as content period."
+          },
+          {
+            "issue_id": "issue_451a1e20f370a9791a09621fd75d82034e42d12da2cf8a11f71a7bd68e898c79",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/payload/section_heading_raw",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Only observed source headings may be inherited."
+          },
+          {
+            "issue_id": "issue_01b898e173aeef23fbd321ddd892f68bad8f2e188d13afbf73d050e087c5a3ad",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/reported_entity",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_daba9952cd56ae5fb3254a340e0ec07379748e29a5fd27fd7286c9c74c080bb5",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/record_type",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_CANDIDATE_REVIEW",
+            "status": "open",
+            "details": "Keyword/context candidate. Negation, role, completeness and factual meaning require review."
+          },
+          {
+            "issue_id": "issue_aea227742c46ae25eb773327b9dbca9fa5281145ee017bcc1790a9a26a682677",
+            "record_id": "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8",
+            "field": "/payload/negation_cue",
+            "source_refs": [
+              "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_NEGATION_REVIEW",
+            "status": "open",
+            "details": "Negation word detected; candidate type is not confirmation of a positive assertion."
+          },
+          {
+            "issue_id": "issue_1fc98dba3df4e8482c0632d98517e081c78142697bfb65fc7caac86202ed777c",
+            "record_id": null,
+            "field": "/coverage",
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "pdf_page": 1,
+            "code": "ESG_BLOCK_PENDING",
+            "status": "open",
+            "details": "Source retained; unparsed cells/charts and table completeness require review."
+          },
+          {
+            "issue_id": "issue_c5e04f16d8fdf11b12228ba7610d48cb13fcbdaf26d2fa98b1e480dc92291bce",
+            "record_id": "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f",
+            "field": "/boundary/consolidation_method",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_df99bfe20f9dcac0c848c1baa47ffe6852c5a3f6c25a56fb47bae52109e225b0",
+            "record_id": "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f",
+            "field": "/boundary/excluded_entities",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_9f1df0957fda824e0172e82c0d6279f517c93bb9189950a7863c11bafd226237",
+            "record_id": "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f",
+            "field": "/boundary/included_entities",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          },
+          {
+            "issue_id": "issue_187980ef0e1e9044f13ad833df82d396ffbda5d5406a56f51d04f20a7f3cac8a",
+            "record_id": "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f",
+            "field": "/reported_entity",
+            "code": "ESG_FIELD_UNRESOLVED",
+            "status": "open",
+            "source_refs": [
+              "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d"
+            ],
+            "pdf_page": 1,
+            "details": "Not yet extracted from source."
+          }
+        ],
+        "coverage": {
+          "source_pages": {
+            "total_pages": 1,
+            "counts": {
+              "processed": 1
+            },
+            "pages": [
+              {
+                "pdf_page": 1,
+                "status": "processed",
+                "attempts": 1
+              }
+            ]
+          },
+          "blocks": [
+            {
+              "block_id": "anchor_f86010b30f66f5ca88b99b47693bb28f790b0ed8685453d2627510f8aa991aa8",
+              "pdf_page": 1,
+              "record_ids": [
+                "record_277706c84d524678172ad7b2fc6e077b4b6e4bebe6ae11ee76ca19e66f3ce448",
+                "record_ad6cc70de5c92c812075ce7f3ea73707de1c08ce1d93508db239710921c3de33"
+              ],
+              "disposition": "text_candidates"
+            },
+            {
+              "block_id": "anchor_cc1e6bfaebc41c9c5738c974477ba58db23faa9664b055c71f9d269e83943d89",
+              "pdf_page": 1,
+              "record_ids": [
+                "record_b57ee5afa040004c7f94a4578fcd273841518ef66603cc8ee16cd7eb09ba19b8"
+              ],
+              "disposition": "text_candidates"
+            },
+            {
+              "block_id": "anchor_bf99bda5cd74231266404909ccf07a04c7893b9d17eef432cfe1e827d693421d",
+              "pdf_page": 1,
+              "record_ids": [
+                "record_17a1aa4540e3595c87242e74027eb1438f1f32c8245dcaa179265d27532ed055",
+                "record_24789620a76bb2bc8ee2eb2df689cb4a6abb3df41b468aff3a532f8dd5a6d09f"
+              ],
+              "disposition": "table_candidates_needs_completeness_review"
+            }
+          ]
+        },
+        "counts": {
+          "claim": 1,
+          "policy": 1,
+          "unknown": 1,
+          "metric": 1,
+          "measurement": 1
+        },
+        "graph_ready": false,
+        "semantic_status": "partial",
+        "pending": [
+          "table_completeness_review",
+          "cross_page_esg_tables",
+          "chart_extraction",
+          "semantic_field_interpretation",
+          "evidence_link_review",
+          "graph_adapter",
+          "review_ui"
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "scope": "structure_and_source_not_factual_accuracy"
+        }
+      },
+      "native_artifacts": {
+        "artifact_fef3d1bcd9481c5a6d06d53701d741a3270f2ffc7c7b34b487e330f805584b31": {
+          "status": "processed",
+          "document": {
+            "texts": [
+              {
+                "text": "Chính sách giảm phát thải và sử dụng năng lượng hiệu quả.",
+                "label": "text"
+              },
+              {
+                "text": "Phạm vi chỉ tiêu chưa xác minh.",
+                "label": "text"
+              }
+            ],
+            "tables": [
+              {
+                "data": {
+                  "num_rows": 2,
+                  "num_cols": 3,
+                  "table_cells": [
+                    {
+                      "text": "Chỉ tiêu",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 0,
+                      "end_col_offset_idx": 1
+                    },
+                    {
+                      "text": "Đơn vị",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 1,
+                      "end_col_offset_idx": 2
+                    },
+                    {
+                      "text": "2025",
+                      "column_header": true,
+                      "start_row_offset_idx": 0,
+                      "end_row_offset_idx": 1,
+                      "start_col_offset_idx": 2,
+                      "end_col_offset_idx": 3
+                    },
+                    {
+                      "text": "Tổng số lao động",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 0,
+                      "end_col_offset_idx": 1
+                    },
+                    {
+                      "text": "người",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 1,
+                      "end_col_offset_idx": 2
+                    },
+                    {
+                      "text": "100",
+                      "column_header": false,
+                      "start_row_offset_idx": 1,
+                      "end_row_offset_idx": 2,
+                      "start_col_offset_idx": 2,
+                      "end_col_offset_idx": 3
+                    }
+                  ]
+                }
+              }
+            ],
+            "body": {
+              "children": [
+                {
+                  "$ref": "#/texts/0"
+                },
+                {
+                  "$ref": "#/texts/1"
+                },
+                {
+                  "$ref": "#/tables/0"
+                }
+              ]
+            }
+          },
+          "markdown": "CONTROLLED FAKE PAGE READER - NOT OCR",
+          "report_version_id": "report_d3f77e9abae215fbf5c285bcd0dea4b563e538e96a1650b2a9445b8c1ad08909",
+          "profile_id": "profile_6e9aef9ed8a13e6d102d092b11ce5883366c6eb02ef1c4f3766ab1e179aad543",
+          "pdf_page": 1,
+          "attempts": 1,
+          "attempt_history": [
+            {
+              "attempt_id": "attempt_3622ccbdc9dfb1505cd69c37e9d8eb88bfbdafbf603ecfb49ea8bd473e8d8190",
+              "at": "2026-10-22T15:46:56.961716+00:00",
+              "status": "processed",
+              "error": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "graph_ready": false,
+  "semantic_status": "partial",
+  "source_note": "PDFs downloaded separately; native_json_pointer resolves within native_artifacts[artifact_id]. Gemini artifacts are model-origin observations, NOT native/Docling ground truth; inspect source_origin and quote_check. No automatic verification or greenwashing verdict."
+}

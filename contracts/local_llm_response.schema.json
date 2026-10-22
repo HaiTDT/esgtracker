@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidates", "warnings"],
+  "properties": {
+    "candidates": {"type": "array", "maxItems": 20, "items": {"$ref": "#/$defs/candidate"}},
+    "warnings": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 1000}}
+  },
+  "$defs": {
+    "citation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_id", "quote"],
+      "properties": {"source_id": {"type": "string"}, "quote": {"type": "string", "minLength": 1, "maxLength": 4000}}
+    },
+    "field": {
+      "type": ["object", "null"], "additionalProperties": false,
+      "required": ["value", "source_id", "quote"],
+      "properties": {
+        "value": {"type": ["string", "integer"], "maxLength": 1000},
+        "source_id": {"type": "string"},
+        "quote": {"type": "string", "minLength": 1, "maxLength": 4000}
+      }
+    },
+    "candidate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["record_type", "domain", "pillar", "label", "evidence", "fields", "notes"],
+      "properties": {
+        "record_type": {"enum": ["measurement", "claim", "policy", "action", "target", "governance", "financial_context"]},
+        "domain": {"enum": ["financial", "esg", "context"]},
+        "pillar": {"enum": ["E", "S", "G", "unknown"]},
+        "label": {"type": "string", "minLength": 1, "maxLength": 1000},
+        "evidence": {"type": "array", "minItems": 1, "maxItems": 20, "items": {"$ref": "#/$defs/citation"}},
+        "fields": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "value_raw": {"$ref": "#/$defs/field"}, "unit_raw": {"$ref": "#/$defs/field"},
+            "year": {"$ref": "#/$defs/field"}, "period_start_raw": {"$ref": "#/$defs/field"},
+            "period_end_raw": {"$ref": "#/$defs/field"}, "measurement_date_raw": {"$ref": "#/$defs/field"},
+            "reporting_entity": {"$ref": "#/$defs/field"}, "consolidation_raw": {"$ref": "#/$defs/field"},
+            "scope_raw": {"$ref": "#/$defs/field"}, "baseline_year": {"$ref": "#/$defs/field"},
+            "target_year": {"$ref": "#/$defs/field"}
+          }
+        },
+        "notes": {"type": "array", "maxItems": 20, "items": {"type": "string", "maxLength": 1000}}
+      }
+    }
+  }
+}

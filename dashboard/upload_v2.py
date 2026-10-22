@@ -7,6 +7,7 @@ import binascii
 import json
 from pathlib import Path
 import re
+import shutil
 import uuid
 import unicodedata
 from datetime import datetime, timezone, timedelta
@@ -53,12 +54,25 @@ def download_filename(result, *, timestamp=None, token=None):
         parts.append(f'BATCH{int(total):02d}')
     stamp = timestamp or datetime.now(timezone(timedelta(hours=7))).strftime('%Y%m%d_%H%M%S')
     suffix = slug(token or uuid.uuid4().hex[:8])[:8]
-    return '_'.join(parts + ['extract_v2', slug(stamp), suffix]) + '.json'
+    marker = ['GEMINI'] if result.get('engine') == 'gemini' or result.get('manifest', {}).get('engine') == 'gemini' else []
+    return '_'.join(parts + marker + ['extract_v2', slug(stamp), suffix]) + '.json'
 
 
 def process_upload_v2(root, contents, filenames, company=None, year=None,
-                      report_type=None, progress_callback=None, number_format='auto'):
+                      report_type=None, progress_callback=None, number_format='auto', *,
+                      engine='docling', cloud_consent=False, gemini_model=None, max_api_requests=10):
     root = Path(root).resolve()
+    if engine not in ('docling', 'gemini'):
+        raise ValueError('Engine trích xuất không hợp lệ.')
+    gemini_config = gemini_client = gemini_budget = None
+    if engine == 'gemini':
+        from src.extraction.gemini import settings, GeminiClient, Budget
+        if cloud_consent is not True:
+            raise ValueError('Cần xác nhận gửi PDF lên Google và chi phí API có thể phát sinh.')
+        gemini_config = settings(root, model=gemini_model)
+        gemini_budget = Budget(max_api_requests)
+        gemini_client = GeminiClient(gemini_config, consent=True)  # config/key check only; no API call
+    pipeline = 'gemini-pdf-v1' if engine == 'gemini' else 'source-typed-v2'
     if number_format not in ('auto', 'vi', 'en'):
         raise ValueError('Quy ước số không hợp lệ.')
     if not contents or not filenames or len(contents) != len(filenames):
@@ -113,33 +127,61 @@ def process_upload_v2(root, contents, filenames, company=None, year=None,
             # Same PDF/profile/input metadata resumes across new upload jobs.
             # Scope is NOT inferred from filenames. Profile hash separates backends.
             cache_key = stable_id('input', spec.company_id, spec.report_type, spec.report_year)[-16:]
-            capture_root = root / 'data/processed/capture_v2' / cache_key
-            workspace = capture_pdf(spec.source_path, capture_root, company_id=spec.company_id,
-                                    report_type=spec.report_type, report_year=spec.report_year,
-                                    progress_callback=emit)
-            bundle = read_json(workspace / 'canonical.json')
-            coverage = bundle['coverage']
-            emit({'stage': 'semantic_v2', 'completed_pages': coverage['counts'].get('processed', 0),
-                  'page_total': coverage['total_pages']})
-            if spec.report_type == 'financial_statements':
-                output_path = extract_financial(workspace, number_format=number_format)
+            if engine == 'gemini':
+                from src.extraction.gemini import extract_pdf
+                output_path = extract_pdf(spec.source_path, root / 'data/processed/gemini_v1' / cache_key,
+                    gemini_config, company_id=spec.company_id, report_type=spec.report_type, report_year=spec.report_year,
+                    consent=cloud_consent, budget=gemini_budget, number_format=number_format,
+                    client=gemini_client, progress_callback=emit)
+                workspace = output_path.parent
+                output = read_json(output_path)
+                coverage = output['coverage']
+                capture_status = 'completed' if coverage['counts'].get('processed', 0) == coverage['total_pages'] else 'partial'
+                # Resume mutates the cache, never a prior upload's saved result.
+                # Each history entry owns a hash-checked, immutable source snapshot.
+                snapshot = run / str(index) / 'gemini_snapshot'
+                snapshot.mkdir(parents=True)
+                for artifact in output['source_artifacts']:
+                    source = (workspace / artifact['path']).resolve()
+                    if not source.is_relative_to(workspace) or file_hash(source) != artifact['sha256']:
+                        raise ValueError('Gemini source changed before history snapshot.')
+                    target = snapshot / artifact['path']
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(source, target)
+                output_path = snapshot / 'gemini_records.json'
+                atomic_json(output_path, output)
+                workspace = snapshot
             else:
-                output_path = extract_esg(workspace, number_format=number_format)
-            output = read_json(output_path)
+                capture_root = root / 'data/processed/capture_v2' / cache_key
+                workspace = capture_pdf(spec.source_path, capture_root, company_id=spec.company_id,
+                                        report_type=spec.report_type, report_year=spec.report_year,
+                                        progress_callback=emit)
+                bundle = read_json(workspace / 'canonical.json')
+                coverage = bundle['coverage']
+                capture_status = bundle['batch']['capture_status']
+                emit({'stage': 'semantic_v2', 'completed_pages': coverage['counts'].get('processed', 0),
+                      'page_total': coverage['total_pages']})
+                if spec.report_type == 'financial_statements':
+                    output_path = extract_financial(workspace, number_format=number_format)
+                else:
+                    output_path = extract_esg(workspace, number_format=number_format)
+                output = read_json(output_path)
             documents.append({'document_index': index, 'filename': spec.source_path.name,
                               'workspace': str(workspace), 'output_path': str(output_path),
-                              'capture_status': bundle['batch']['capture_status'],
+                              'capture_status': capture_status,
                               'coverage': coverage, 'output': output})
         except Exception as exc:
             failures.append({'document_index': index, 'filename': spec.source_path.name,
                              'error': str(exc), 'workspace': str(workspace) if workspace else None})
-        atomic_json(run / 'run_manifest.json', {'pipeline': 'source-typed-v2', 'created_at': now(),
+        atomic_json(run / 'run_manifest.json', {'pipeline': pipeline, 'engine': engine, 'created_at': now(),
                     'document_count': len(parsed), 'processed_documents': len(documents),
                     'documents': [{k: v for k, v in d.items() if k != 'output'} for d in documents],
-                    'failures': failures, 'graph_ready': False})
+                    'failures': failures, 'graph_ready': False,
+                    'api_requests_used': gemini_budget.used if gemini_budget else 0,
+                    'api_request_limit': gemini_budget.limit if gemini_budget else None})
     if progress_callback:
         progress_callback({'stage': 'export', 'document_index': len(parsed), 'document_total': len(parsed)})
-    return {'status': 'completed', 'pipeline': 'source-typed-v2', 'run_directory': str(run),
+    return {'status': 'completed', 'pipeline': pipeline, 'engine': engine, 'run_directory': str(run),
             'manifest': read_json(run / 'run_manifest.json'), 'documents': documents,
             'graph_ready': False, 'semantic_status': 'partial'}
 
@@ -160,11 +202,11 @@ def export_result(result):
         documents.append({'document_index': document['document_index'], 'filename': document['filename'],
                           'capture_status': document['capture_status'], 'coverage': document['coverage'],
                           'output': output, 'native_artifacts': native})
-    return {'schema_version': 'esg-upload/2.0.0', 'pipeline': 'source-typed-v2',
+    return {'schema_version': 'esg-upload/2.0.0', 'pipeline': result.get('pipeline', 'source-typed-v2'),
             'document_count': result['manifest']['document_count'], 'documents': documents,
             'failures': [{k: v for k, v in f.items() if k != 'workspace'} for f in result['manifest']['failures']],
             'graph_ready': False, 'semantic_status': 'partial',
-            'source_note': 'PDFs downloaded separately; native_json_pointer resolves within native_artifacts[artifact_id]. No automatic verification or greenwashing verdict.'}
+            'source_note': 'PDFs downloaded separately; native_json_pointer resolves within native_artifacts[artifact_id]. Gemini artifacts are model-origin observations, NOT native/Docling ground truth; inspect source_origin and quote_check. No automatic verification or greenwashing verdict.'}
 
 
 def record_rows(result):

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "provider", "reports", "records", "source_artifacts", "coverage", "issues", "model", "profile_id", "graph_ready", "semantic_status"],
+  "properties": {
+    "schema_version": {"const": "gemini-report-candidates/1.0"},
+    "provider": {"const": "gemini_api"},
+    "graph_ready": {"const": false},
+    "semantic_status": {"const": "partial"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "model": {"type": "object", "required": ["requested", "observed_versions"]},
+    "reports": {"type": "array", "minItems": 1, "maxItems": 1},
+    "source_artifacts": {"type": "array", "minItems": 1},
+    "issues": {"type": "array"},
+    "coverage": {"type": "object", "required": ["total_pages", "counts", "pages"], "properties": {
+      "total_pages": {"type": "integer", "minimum": 1},
+      "pages": {"type": "array", "items": {"type": "object", "required": ["pdf_page", "status"], "properties": {
+        "pdf_page": {"type": "integer", "minimum": 1}, "status": {"enum": ["pending", "processed", "failed"]}
+      }}}
+    }},
+    "records": {"type": "array", "items": {"type": "object", "required": ["record_id", "record_type", "payload", "source_refs", "field_sources", "gemini_evidence", "extraction_provenance", "review"], "properties": {
+      "review": {"type": "object", "properties": {"status": {"const": "needs_review"}, "verified_fields": {"const": []}}},
+      "extraction_provenance": {"type": "object", "required": ["provider", "is_gold", "factual_accuracy_verified"], "properties": {
+        "provider": {"const": "gemini_api"}, "is_gold": {"const": false}, "factual_accuracy_verified": {"const": false}
+      }}
+    }}}
+  }
+}

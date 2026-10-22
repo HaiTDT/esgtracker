@@ -8,7 +8,37 @@ bằng chứng và xuất gói JSON/PDF để phân tích tiếp.
 > và các cặp đối chiếu là candidate cần kiểm tra PDF. `PASS` của validator chỉ
 > xác nhận điều kiện cơ học, không xác nhận nội dung đã đúng hoặc đầy đủ.
 
+## Bộ tài liệu bàn giao và quickstart offline
+
+Bắt đầu tại [Documentation index](docs/00-documentation-index.md): kiến trúc,
+cài đặt, từng pipeline/module, hợp đồng JSON, quality, CLI, vận hành, bảo mật,
+troubleshooting, packaging và checklist có dẫn chứng source/test.
+
+Từ thư mục chứa `app.py`, sau khi cài requirements:
+
+```powershell
+.\.venv\Scripts\python.exe -B scripts/check_handover.py
+.\.venv\Scripts\python.exe -B scripts/handover_smoke.py --destination outputs/first_smoke_moi
+```
+
+Đích smoke phải mới. Smoke dùng **page reader giả lập**, không kiểm OCR/LLM thật;
+xem [ví dụ JSON tổng hợp](examples/README.md) và [nhật ký kiểm chứng](docs/reference/verification.md).
+Gói `*-review.zip` là source snapshot kiểm nội bộ, **chưa phải release được duyệt
+phân phối**; xem [distribution status](DISTRIBUTION_STATUS.md) và
+[packaging](docs/15-packaging-and-release.md). `.env.example` không tự được load.
+
 ## Chức năng
+
+Mới: [rà soát/correction và đo chất lượng](docs/QUALITY_REVIEW.md): lưu bản sửa
+theo field, lịch sử/revision và phát hiện stale; tạo draft gán nhãn, đo strict
+precision/recall/F1, field accuracy và CER/WER khi có gold được người dùng duyệt.
+Hiện chưa có gold đã duyệt hoặc con số precision thực tế để công bố.
+
+Mới: [Gemini API tự động](docs/GEMINI_INTEGRATION.md) trong màn hình kéo thả:
+đọc PDF theo nhóm trang, lưu history/checkpoint và xuất JSON có evidence để rà
+soát. Đây là tùy chọn cloud cần API key máy chủ, đồng ý gửi PDF và giới hạn request;
+Docling local vẫn là mặc định. Bộ kiểm thử dùng phản hồi giả lập, chưa xác nhận
+chất lượng/chi phí bằng một lượt API thật.
 
 - Dashboard tiếng Việt, kéo thả PDF, tiến độ xử lý, trạng thái lỗi và lịch sử local.
 - Docling, OCR, bảng/ô và vị trí nguồn theo trang; worker riêng để cô lập lỗi native.
@@ -24,7 +54,8 @@ bằng chứng và xuất gói JSON/PDF để phân tích tiếp.
 
 Môi trường đã kiểm thử: **Python 3.12 64-bit**, Windows, PowerShell. Lần đầu cần
 Internet để cài thư viện và có thể tải mô hình Docling. Pipeline trích xuất hiện
-tại chạy local và không cần OpenAI API key.
+tại mặc định chạy local và không cần API key. Chỉ nhánh Gemini tùy chọn cần
+`GEMINI_API_KEY`; không tự gửi tài liệu lên cloud.
 
 Mở PowerShell, chạy từng dòng:
 
@@ -244,3 +275,34 @@ cập nhật mã nguồn. `.gitignore` loại chúng khỏi những commit mới
 
 Tài liệu thêm: [BCTC](docs/FINANCIAL_V2_USAGE.md), [ESG](docs/ESG_V2_USAGE.md),
 [lịch sử](docs/EXTRACTION_HISTORY.md), [corporate handoff](docs/CORPORATE_HANDOFF_USAGE.md).
+
+## Bộ gán nhãn tham chiếu Oil & Gas
+
+[Hướng dẫn gold GRI/SASB/IFRS S1–S2](docs/OIL_GAS_GOLD.md) mô tả codebook 32 khái niệm,
+hai lượt gán nhãn PDF độc lập, phân xử và đo độ chính xác. Tạo gói nháp:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\oil_gas_gold.py build outputs\ESG_extract_V2 --destination outputs\oil_gold_bsr_v1 --pages 24 --split dev
+```
+
+Gói tạo ra là `DRAFT_NOT_GOLD`, không tự điền đáp án hoặc tính precision.
+Protocol SASB đầy đủ còn cần bản chuẩn hợp pháp đúng edition; ánh xạ pending không
+được coi là tương đương chuẩn. Không thay đổi rule trích xuất hay kết luận ESG.
+
+[Bản tham chiếu BSR do AI đối chiếu PDF](docs/BSR_AI_REFERENCE.md) là sidecar riêng,
+không tự chuyển thành human gold hoặc ghi đè dữ liệu extract.
+
+## LLM local qua Ollama - opt-in CLI
+
+Đã có [backend trích xuất bằng LLM local](docs/LOCAL_LLM.md): source-v2 →
+Ollama đã cài local → JSON Schema → kiểm trích dẫn từng field → candidate chờ duyệt.
+Không tự tải model, không fallback cloud; giữ checkpoint/resume, model digest và
+cảnh báo phần nguồn chưa đọc. Kiểm cấu hình bằng:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/extract_local_llm.py --check
+```
+
+Đây là backend text-only đầu tiên, **chưa thay engine UI kéo thả, chưa có vision
+hoặc cam kết trích xuất đầy đủ báo cáo**. Output `local-llm-extract/1.0` riêng,
+không tự nạp corporate adapter/Graph và không tạo kết luận greenwashing.

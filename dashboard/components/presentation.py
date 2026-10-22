@@ -5,6 +5,9 @@ from dashboard.upload_v2 import record_rows
 
 
 def review_label(record):
+    human = record.get('human_review')
+    if human:
+        return ('REVIEWED', '✓ Đã rà soát') if human['status']=='reviewed' else ('NOT_REVIEWED', '○ Chưa rà soát · NOT_REVIEWED')
     status = record.get('review', {}).get('status')
     # Automatic candidate/needs_review is NOT a completed review.
     return ('REVIEWED', '✓ Đã rà soát') if status in ('reviewed', 'verified') else (
@@ -22,6 +25,15 @@ def display_rows(result):
                    pillar=record.get('classification', {}).get('pillar', 'unknown'),
                    report_year=doc['output']['reports'][0].get('reporting_year'))
         row['indicator'] = row.get('indicator') or record.get('original_text')
+        human=record.get('human_review')
+        if human:
+            row['human_review_status']=human['status']
+            row['review_revision']=human['revision']
+            if human['status'] in ('reviewed','partially_reviewed'):
+                for canonical,column in [('value','value'),('unit','unit'),('observation_year','year')]:
+                    if canonical in human['reviewed_fields']:
+                        value=human['effective_fields'][canonical]
+                        row[column]=str(value) if canonical=='value' and value is not None else value
     return rows
 
 

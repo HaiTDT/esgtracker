@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "model", "profile_id", "reports", "source_artifacts", "source_workspace", "source_capture_sha256", "records", "issues", "coverage", "graph_ready", "semantic_status", "is_gold", "validation", "limits"],
+  "properties": {
+    "schema_version": {"const": "local-llm-extract/1.0"},
+    "graph_ready": {"const": false}, "is_gold": {"const": false}, "semantic_status": {"const": "partial"},
+    "records": {"type": "array", "items": {
+      "type": "object",
+      "required": ["record_id", "record_type", "domain", "label_raw", "original_text", "fields", "parsed_value", "field_sources", "evidence", "missing_fields", "quality", "chunk_ids"],
+      "properties": {
+        "record_id": {"type": "string", "minLength": 1},
+        "record_type": {"enum": ["measurement", "claim", "policy", "action", "target", "governance", "financial_context"]},
+        "domain": {"enum": ["financial", "esg", "context"]},
+        "parsed_value": {"type": ["string", "null"]},
+        "evidence": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["source", "physical_page", "block_id", "text_span", "quote"]}},
+        "quality": {"type": "object", "required": ["review_status", "boundary_verified", "is_gold", "verdict"], "properties": {
+          "review_status": {"const": "pending_human_review"}, "boundary_verified": {"const": false},
+          "is_gold": {"const": false}, "verdict": {"type": "null"}
+        }}
+      }
+    }},
+    "coverage": {"type": "object", "required": ["source_pages", "total_chunks", "counts", "chunks", "source_spans", "processed_source_spans", "text_pass_complete", "semantic_completeness_verified", "uninterpreted_blocks"], "properties": {"semantic_completeness_verified": {"const": false}}},
+    "validation": {"type": "object", "properties": {"factual_accuracy_verified": {"const": false}}}
+  }
+}
